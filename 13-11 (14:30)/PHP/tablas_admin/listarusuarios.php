@@ -12,7 +12,7 @@
         include("../includes/funciones.php");
     ?>
     
-    <!-- Incluye el encabezado de administrador -->
+    <!-- Cabecera administrado cuando está registrado-->
     <?php include("../includes/cabecera_registrado.php"); ?>
 </head>
 <body>
@@ -26,8 +26,7 @@
     <div id="filtross">
         <!-- Filtro por nombre -->
         <div id="buscadorr">
-            <label for="nombreBusqueda">Buscar por Nombre:</label>
-            <input type="text" id="nombreBusqueda" name="nombreBusqueda">
+            <input type="text" id="nombreBusqueda" name="nombreBusqueda" placeholder="Buscar por el nombre">
             <button id="filtrarPorNombre">Buscar</button>
         </div>
 
@@ -59,7 +58,7 @@
     </div>
 
     <!-- Tabla de Alumnos -->
-    <table border="1">
+    <table id="tabla">
         <tr>
             <th>Nombre</th>
             <th>Apellidos</th>
@@ -122,11 +121,11 @@
         ?>
 
     </table>
-
+<!-- 
     <?php
         // Incluye el pie de página
         include("../includes/footer.php");
-    ?>
+    ?> -->
 </body>
 <script>
 document.addEventListener('DOMContentLoaded', function() {

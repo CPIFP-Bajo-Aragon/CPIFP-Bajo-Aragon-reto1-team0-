@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crea tu Currículum</title>
-<link rel="stylesheet" href="../../CSS/curriculum.css">
+    <title>Currículum</title>
+    <link rel="stylesheet" href="../../CSS/curriculum.css">
 </head>
-<body>
-    <?php include("../includes/funcionesAlumno.php"); ?>
-    <header>
-        <?php include("../includes/cabecera_alumno.php"); ?>
+<?php include("../includes/funcionesAlumno.php"); ?>
+<?php include("../includes/cabecera_registrado.php"); ?>
+<?php include("../login/cabecera_registrado.php"); ?>
 
-    </header>
+<body>
+    <!-- Navegación de migas de pan -->
+    <ul class="breadcrumb">
+        <li><a href="../paginas_inicio/PaginaAlumno.php">Menú</a></li>
+        <li>Curriculum</li>
+    </ul> 
 
     <main>
         <aside>
             <section>
-            <div class="imagen">
-
-            </div>
                 <h2>PERFIL</h2>
-                
+
                 <div>
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" value="<?php echo $mostrar['nombre'] ?>">
@@ -60,98 +62,134 @@
 
                 <div>
                     <label for="edad">Carnet de Conducir:</label>
-                    <input type="text" name="carnet" placeholder="Carnet" value="<?php echo $mostrar['carnet_conducir'] ?>">                </div>
+                    <input type="text" name="carnet" placeholder="Carnet" value="<?php echo $mostrar['carnet_conducir'] ?>"> </div>
             </section>
-            
+
             <section>
                 <h2>APTITUDES</h2>
-                <div>
+                <!-- <button onclick="crear('crear1')"><i class='fas fa-plus'></i></button> -->
+                <!-- <button onclick="eliminar('crear1')"><i class='fas fa-trash'></i></button> -->
+                <div id="crear1">
                     <label for="actitudes">Aptitud:</label>
-                    <textarea id="actitudes" name="actitudes" rows="4" cols="50"  value="<?php echo $mostrar['actitudes'] ?>"></textarea>
+                    <textarea id="aptitudes" name="aptitudes" rows="4" cols="50" style="width: 10px;  border: 1px solid black; margin-top: 8px;"><?php echo $mostrar['aptitudes'];?></textarea>
                 </div>
-                <button>Añadir</button>
-
+              
             </section>
             <section>
                 <h2>ACTITUDES</h2>
-                <div>
+                <!-- <button onclick="crear('crear2')"><i class='fas fa-plus'></i></button> -->
+                <!-- <button onclick="eliminar('crear2')"><i class='fas fa-trash'></i></button> -->
+                <div id="crear2">
                     <label for="actitud">Actitudes:</label>
-                    <input type="text" name="actitud" placeholder="Actitud" value="<?php echo $mostrar['actitudes'] ?>">
+                    <textarea id="actitudes" name="actitudes" rows="4" cols="50" style="width: 10px;  border: 1px solid black; margin-top: 8px;"><?php echo $mostrar['actitudes'];?></textarea>
                 </div>
-                <button>Añadir</button>
-
+          
             </section>
         </aside>
-        
+
         <article>
             <section>
-            <div class="unionEuropea">
-            <img src="../../img/unionEuropea.png" alt="Logo Unión Europea" width="200px" height="50px">   
-             </div>
+                <div class="unionEuropea">
+                    <img src="../../img/unionEuropea.png" alt="Logo Unión Europea" width="200px" height="50px">
+                </div>
 
                 <h2>EXPERIENCIA LABORAL</h2>
-                <div>
+                <button onclick="crear('crear3')"><i class='fas fa-plus'></i></button>
+                <button onclick="eliminar('crear3')"><i class='fas fa-trash'></i></button>
+                <div id="crear3">
+
+                    <p> 
                     <label for="cargo">Nombre Cargo:</label>
                     <input type="text" id="cargo" name="cargo">
-                </div>
+                </p>
 
-                <div>
+                <p id="crear4">
                     <label for="empresa">Nombre de la Empresa:</label>
                     <input type="text" id="empresa" name="empresa">
-                </div>
+                </p>
 
-                <div>
+                <p id="crear5">
                     <label for="descripcion">Descripcion:</label>
                     <textarea id="descripcion" name="descripcion" rows="4" cols="50"></textarea>
-                </div>
+                </p>
 
-                <div>
+                <p id="crear6">
                     <label for="fecha">Fecha:</label>
                     <input type="date" id="fecha" name="fecha">
-                </div>
+                </p>
 
-                <div>
+                <p id="crear7">
                     <label for="poblacion">Poblacion:</label>
                     <input type="text" id="poblacion" name="poblacion">
+                </p>
                 </div>
-
-                <button>Añadir</button>
+               
             </section>
 
             <section>
                 <h2>FORMACIÓN ACADÉMICA</h2>
-                <div>
+
+                <button onclick="crear('crear8')"><i class='fas fa-plus'></i></button>
+                <button onclick="eliminar('crear8')"><i class='fas fa-trash'></i></button>
+                <div id="crear8">
                     <label for="estudio">Nombre Estudio:</label>
                     <input type="text" id="estudio" name="estudio">
                 </div>
 
-                <div>
+                <div id="crear9">
                     <label for="institucion">Nombre institucion:</label>
                     <input type="text" id="institucion" name="institucion">
                 </div>
 
-                <div>
+                <div id="crear10">
                     <label for="fecha_formacion">Fecha:</label>
                     <input type="date" id="fecha_formacion" name="fecha_formacion">
                 </div>
 
-                <div>
+                <div id="crear11">
                     <label for="poblacion_formacion">Poblacion:</label>
                     <input type="text" id="poblacion_formacion" name="poblacion_formacion">
                 </div>
-                <button>Añadir</button>
+
+               
             </section>
 
             <section>
                 <h2>IDIOMAS</h2>
-                <div>
+                <button onclick="crear('crear12')"><i class='fas fa-plus'></i></button>
+                <button onclick="eliminar('crear12')"><i class='fas fa-trash'></i></button>
+                <div id="crear12">
                     <label for="idiomas">Idiomas:</label>
                     <textarea id="idiomas" name="idiomas" rows="4" cols="50"></textarea>
-                </div>
-                <button>Añadir</button>
 
+                </div>
+                
             </section>
         </article>
     </main>
 </body>
+
 </html>
+
+<script>
+        function crear(divId) {
+            let originalDiv = document.getElementById(divId);
+            let clonarDiv = originalDiv.cloneNode(true);
+
+            let textarea = clonarDiv.querySelector("textarea");
+            if (textarea) {
+                textarea.value = '';
+            }
+
+            originalDiv.parentNode.appendChild(clonarDiv);
+        }
+
+        function eliminar(divId) {
+            let container = document.getElementById(divId).parentNode;
+
+            container.removeChild(container.lastChild);
+            
+        }
+
+        
+    </script>

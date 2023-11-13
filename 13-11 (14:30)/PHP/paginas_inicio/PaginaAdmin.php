@@ -14,107 +14,133 @@
     </head>
 
     <body>
+        <!-- Botones para abrir las modales -->
+            <div class="botonesAbrirModal">
+                <button id="openModalBtn">INSERTAR EMPRESAS</button>
+
+                <button id="openModal">INSERTAR OFERTAS</button>
+
+                <button id="openBtn">INSERTAR ALUMNOS</button>
+            </div>
+
         <?php 
+        
             if(isset($_POST['agregarestudio'])|| isset($_POST['agregarIdioma'])||isset($_POST['agregarExperiencia'])){             
 
                 // Agregar estudios
-               
-                if(isset($_POST['agregarestudio'])){
-                    // Recopila los datos del formulario y los almacena en la sesión
-                    $_SESSION['Titulo'] = $_POST['titulobtn'];
-                    $_SESSION['Descripcion'] = $_POST['Descripcionbtn'];
-                    $_SESSION['Duracion'] = $_POST['Duracionbtn'];
-                    $_SESSION['Aptitudes'] = $_POST['AptitudBtn'];
-                    $_SESSION['Contrato'] = $_POST['carnetConducir'];
-                    $_SESSION['Poblacion'] = $_POST['PoblacionSelect'];
-                    $_SESSION['Empresa'] = $_POST['EmpresaSelect'];
-            
-                    // Obtiene la opción seleccionada para los estudios desde el formulario
-                    $selectedEstudio = $_POST['EstudiosSelect'];
-            
-                    // Obtiene la información actual de los estudios almacenada en la sesión
-                    $estudios = isset($_SESSION['estudios']) ? $_SESSION['estudios'] : array();
-            
-                    // Agrega la nueva opción de estudio si está seleccionada
-                    if (!empty($selectedEstudio)) {
-                        $estudios[] = $selectedEstudio;
-                    }
-            
-                    // Almacena la información actualizada de los estudios en la sesión
-                    $_SESSION['estudios'][] = $estudios;
-            
-                    // Agrega información adicional a otras sesiones si es necesario
-                    if (!empty($idioma)){
-                        $_SESSION['idiomas'][] = $idioma;
-                    }
-                    if (!empty($experiencia)){
-                        $_SESSION['experiencias'][] = $experiencia;
-                    }
-                    // Imprime los elementos del array $hola
-
-                    if(isset($_SESSION['estudios'])){
-                        $i = 0;
-                        while ($i < count($_SESSION['estudios'])) {
-                            echo "hola";
-                            echo $_SESSION['estudios'][$i];
-                            $i++;
+                
+                    if(isset($_POST['agregarestudio'])){
+                        // Recopila los datos del formulario y los almacena en la sesión
+                        $_SESSION['Titulo'] = $_POST['titulobtn'];
+                        $_SESSION['Descripcion'] = $_POST['Descripcionbtn'];
+                        $_SESSION['Duracion'] = $_POST['Duracionbtn'];
+                        $_SESSION['Aptitudes'] = $_POST['AptitudBtn'];
+                        $_SESSION['Contrato'] = $_POST['carnetConducir'];
+                        $_SESSION['Poblacion'] = $_POST['PoblacionSelect'];
+                        $_SESSION['Empresa'] = $_POST['EmpresaSelect'];
+                
+                        // Obtiene la opción seleccionada para los estudios desde el formulario
+                        $selectedEstudio = $_POST['EstudiosSelect'];
+                
+                        // Obtiene la información actual de los estudios almacenada en la sesión
+                        $estudios = isset($_SESSION['estudios']);
+                
+                        // Agrega la nueva opción de estudio si está seleccionada
+                        if (!empty($selectedEstudio)) {
+                            $estudios = $selectedEstudio;
                         }
+                        
+                
+                        // Almacena la información actualizada de los estudios en la sesión
+                        $_SESSION['estudios'][]= $estudios;
+                        foreach($_SESSION['estudios'] as $est){
+                            echo("Estudios:".$est.", ");
+                        }
+
                     }
-                    
-
-                }
-            
-
                 
 
-                // Agregar idiomas
-                    if(isset($_POST['agregarIdioma'])){
-                        $_SESSION['Titulo']=$_POST['titulobtn'];
-                        $_SESSION['Descripcion']=$_POST['Descripcionbtn'];
-                        $_SESSION['Duracion']=$_POST['Duracionbtn'];
-                        $_SESSION['Aptitudes']=$_POST['AptitudBtn'];
-                        $_SESSION['Contrato']=$_POST['carnetConducir'];
-                        $_SESSION['Poblacion']=$_POST['PoblacionSelect'];
-                        $_SESSION['Empresa']=$_POST['EmpresaSelect'];
+                    
+
+                //AGREGAR IDIOMA
+                    if (isset($_POST['agregarIdioma'])) {
+                        // Asigna valores a las variables de sesión
+                        $_SESSION['Titulo'] = $_POST['titulobtn'];
+                        $_SESSION['Descripcion'] = $_POST['Descripcionbtn'];
+                        $_SESSION['Duracion'] = $_POST['Duracionbtn'];
+                        $_SESSION['Aptitudes'] = $_POST['AptitudBtn'];
+                        $_SESSION['Contrato'] = $_POST['carnetConducir'];
+                        $_SESSION['Poblacion'] = $_POST['PoblacionSelect'];
+                        $_SESSION['Empresa'] = $_POST['EmpresaSelect'];
+                    
+                        // Almacenar información del idioma en $_SESSION['idiomas']
+                        $selectedIdioma = isset($_POST['IdiomaSelect']) ? $_POST['IdiomaSelect'] : '';
+                        $selectedNivel = isset($_POST['NivelSelect']) ? $_POST['NivelSelect'] : '';
+                    
+                        // Verifica si ya existe un idioma con el mismo nombre en $_SESSION['idiomas']
+                        $idiomaExistente = false;
+                        foreach ($_SESSION['idiomas'] as $idioma) {
+                            if (isset($idioma['nombre']) && $idioma['nombre'] === $selectedIdioma) {
+                                $idiomaExistente = true;
+                                break;
+                            }
+                        }
+
+                        if (!$idiomaExistente && $selectedIdioma !== '') {
+                            // Solo agrega el idioma si no existe y el nombre no está vacío
+                            $_SESSION['idiomas'][] = ['nombre' => $selectedIdioma, 'idioma' => $selectedNivel];
+                            // Mostrar información almacenada en $_SESSION['idiomas']
+                        if (isset($_SESSION['idiomas']) && is_array($_SESSION['idiomas'])) {
+                            foreach ($_SESSION['idiomas'] as $idioma) {
+                                // Verifica si la clave 'nombre' existe antes de intentar acceder a ella
+                                $nombreIdioma = isset($idioma['nombre']) ? $idioma['nombre'] : '';
+                                
+                                // Verifica si la clave 'idioma' existe antes de intentar acceder a ella
+                                $nivelIdioma = isset($idioma['idioma']) ? $idioma['idioma'] : '';
+                    
+                                echo "Idioma: " . $nombreIdioma . ", Nivel: " . $nivelIdioma . "<br>";
+                            }
+                        }
+                        }
+
+                    
                         
-                        $selectedIdioma = $_POST['IdiomaSelect'];
-                        $selectedNivel = $_POST['NivelSelect'];
-                        if (!empty($selectedIdioma) && !empty($selectedNivel)) {
-                            $idioma['nombre'] = $selectedIdioma;
-                            $idioma['nivel'] =  $selectedNivel;
-                        }
-                        if (!empty($estudios)){
-                        $_SESSION['estudios'][]=$estudios;
-                            
-                        }
-                        if (!empty($experiencia)){
-                            $_SESSION['experiencias'][]= $experiencia;
-                        }
                     }
+                    
+                        
 
                 // Agregar experiencias
-                    if(isset($_POST['agregarExperiencia'])){
-                        $_SESSION['Titulo']=$_POST['titulobtn'];
-                        $_SESSION['Descripcion']=$_POST['Descripcionbtn'];
-                        $_SESSION['Duracion']=$_POST['Duracionbtn'];
-                        $_SESSION['Aptitudes']=$_POST['AptitudBtn'];
-                        $_SESSION['Contrato']=$_POST['carnetConducir'];
-                        $_SESSION['Poblacion']=$_POST['PoblacionSelect'];
-                        $_SESSION['Empresa']=$_POST['EmpresaSelect'];
-                        $selectedExperiencia = $_POST['ExperienciaSelect'];
-                        if (!empty($selectedExperiencia)) {
-                            $experiencia[] = $selectedExperiencia;
-                        }
-                        if (!empty($idioma)){
-                            $_SESSION['idiomas'][]=$idioma;
-                        }
-                        if (!empty($estudios)){
-                            $_SESSION['estudios'][]=$estudios;
+                        if(isset($_POST['agregarExperiencia'])){
+                            $_SESSION['Titulo']=$_POST['titulobtn'];
+                            $_SESSION['Descripcion']=$_POST['Descripcionbtn'];
+                            $_SESSION['Duracion']=$_POST['Duracionbtn'];
+                            $_SESSION['Aptitudes']=$_POST['AptitudBtn'];
+                            $_SESSION['Contrato']=$_POST['carnetConducir'];
+                            $_SESSION['Poblacion']=$_POST['PoblacionSelect'];
+                            $_SESSION['Empresa']=$_POST['EmpresaSelect'];
+                            
+                            // Obtiene la opción seleccionada para los experiencia desde el formulario
+                                $selectedExperiencia = $_POST['ExperienciaSelect'];
+                    
+                            // Obtiene la información actual de los experiencia almacenada en la sesión
+                                $experiencia = isset($_SESSION['experiencia']);
+                    
+                            // Agrega la nueva opción de estudio si está seleccionada
+                                if (!empty($selectedExperiencia)) {
+                                    $experiencia = $selectedExperiencia;
+                                }
+                            
+                    
+                            // Almacena la información actualizada de los experiencia en la sesión
+                                $_SESSION['experiencia'][]= $experiencia;
+                                foreach($_SESSION['experiencia'] as $est){
+                                    echo("experiencia:".$est.", ");
+                                }
 
-                        }
-                        $_SESSION['experiencias'][]= $experiencia;
-                    }
+                        
 
+
+                //Insertar oferta
                     if(isset($_POST['insertoferta'])){
                         $_SESSION['Titulo']="";
                         $_SESSION['Descripcion']="";
@@ -123,14 +149,13 @@
                         $_SESSION['Contrato']="";
                         $_SESSION['Poblacion']="";
                         $_SESSION['Empresa']="";
-                        $estudios[]=$_SESSION['estudios'];
-                        
-                        $experiencia[]=$_SESSION['experiencias'];
-                        
-                        $idioma[]=$_SESSION['idiomas'];
                         insertarofertasadmin($conexion, $estudios, $idioma, $experiencia);
                         
                     }
+                
+                   
+
+                    
                     ?>
                     <!-- Ventana Modal INSERTAR OFERTAS -->
                         <div id="myModalOfertas" class="modal" style="display: block;">
@@ -215,7 +240,7 @@
                     $experiencia=array();
                     $_SESSION['estudios'] = [];
                     $_SESSION['idiomas']=[];
-                    $_SESSION['experiencias']=[];
+                    $_SESSION['experiencia'] = []; // Asigna un array vacío antes de agregar elementos
                 if(isset($_POST['insertoferta'])){
                         $_SESSION['Titulo']="";
                         $_SESSION['Descripcion']="";
@@ -226,6 +251,7 @@
                         $_SESSION['Empresa']="";
                         insertarofertasadmin($conexion, $estudios, $idioma, $experiencia);
                 }
+            }
                         ?>
                         
                         <!-- Ventana Modal INSERTAR OFERTAS -->
@@ -285,7 +311,7 @@
                                         <button type="submit" name="agregarIdioma" id="agregarIdioma">Agregar Idioma</button>
 
                                     <!-- Múltiples Experiencias -->
-                                        <label for="ExperienciaSelect">Experiencia:</label>
+                                        <label for="ExperienciaLabel">Experiencia:</label>
                                         <select name="ExperienciaSelect" id="ExperienciaSelect" >
                                             <?php
                                                 listaroficios($conexion);
@@ -303,15 +329,7 @@
 
             ?>
 
-        <!-- Botones para abrir las modales -->
-        <div class="botonesAbrirModal">
-            <button id="openModalBtn">INSERTAR EMPRESAS</button>
-
-            <button id="openModal">INSERTAR OFERTAS</button>
-
-            <button id="openBtn">INSERTAR ALUMNOS</button>
-        </div>
-
+        
         <!-- Ventana Modal INSERTAR EMPRESAS -->
             <div id="myModalEmpresa" class="modal">
                 <div class="modal-content">
@@ -421,31 +439,30 @@
 
         <div id="botones">
             <div id="empresa">
+                <a href="../tablas_admin/listarempresas.php">
                 <button id="button" class="custom-button">
-                    <a href="../tablas_admin/listarempresas.php">
                     <i id="imgIconos" class="fa-solid fa-list fa-2xl"></i><p class="parrafoIconos">LISTAR</p><p class="parrafoIconos">EMPRESAS</p>
-                </button>   
+                </button></a>
             </div>
 
             <div  id="ofertas">
+                <a  href="../tablas_admin/listarofertas.php">
                 <button id="button" class="custom-button">
-                    <a href="../tablas_admin/listarofertas.php">
                     <i id="imgIconos" class="fa-solid fa-bag-shopping fa-2xl"></i><p class="parrafoIconos">OFERTAS</p>
-                </button>   
+                </button></a>
             </div>
             <div id="Usuarios">
-                <button id="button" class="custom-button">
-                    <a href="../tablas_admin/listarusuarios.php">
+                <a href="../tablas_admin/listarusuarios.php">
+                <button id="button" class="custom-button" href="../tablas_admin/listarusuarios.php">
                     <i id="imgIconos" class="fa-solid fa-users fa-2xl"></i><p class="parrafoIconos">ALUMNOS</p>
-                </button>  
+                </button></a>
             </div>
         </div>
-
-        <footer>
-            <?php include "../includes/footer.php" ?>
-        </footer>
     </body>
 </html>
+
+<?php include "../includes/footer.php" ?>
+
 <script>
     // Función para abrir la ventana modal
     function openModal(modalId) {

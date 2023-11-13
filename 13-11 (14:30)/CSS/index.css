@@ -17,6 +17,7 @@ body {
 .naranja{
     color: #ff944e;
 }
+
 header {
     display: flex;
     justify-content:flex-start;
@@ -26,14 +27,16 @@ header {
     color: #fff;
     height: 10vh;
     font-family: 'Montserrat', sans-serif;
-    padding-right: 10px; 
 }
+
 a{
     text-decoration: none;
 }
+
 h1{
     color: white; 
-} 
+}
+
 #linkLogo:visited{
     color: white;
 }
@@ -48,13 +51,12 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 5%;
-    padding-right: 10px;
 }
 
 #logoUser{
     font-size: 50px;
 }
+
 #logoOut{
     font-size: 80px; 
     color: #ffffff;
@@ -123,7 +125,7 @@ footer {
 
 
 /* Estilos del pie de página */
-footer {
+ /* footer {
     background-color: rgba(26,154,182, 0.3);
     color: #fff;
 }
@@ -147,7 +149,7 @@ a{
     
     
 }
-
+*/
 .boton2 {
     background-color: #568c98;
     color: #fff;
@@ -157,7 +159,7 @@ a{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
+} 
 
 /*CSS PARA RECUPERAR CONTRASEÑA*/
 .recuperarPassword {
@@ -267,6 +269,7 @@ ul.breadcrumb li a:hover {
     justify-content: center;
     height: 40vh; 
     width: 50vw;
+    margin:auto;
 } 
 .inicio_sesion h2{
     margin-bottom: 3vh;
@@ -499,7 +502,7 @@ input[type="submit"]:hover {
     color: rgba(0, 0, 0, 0.5);
     font-weight: bold;
     font-size: 30px;
-    /* margin-top: 40px; */
+    padding-left: 2%;
 }
 
 /*CSS PARA LA PÁGINA GESTIÓN EMPRESAS DESDE LA PANTALLA DEL ADMIN*/
@@ -511,13 +514,14 @@ input[type="submit"]:hover {
 } 
 
 #divfiltros{
-    Display: flex;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 #buscador{
     width:150px;
 }
-#fbuscador{
+#fbusqueda{
     flex: 1;
 }
 #fpoblacion{
@@ -538,6 +542,7 @@ input[type="submit"]:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     border-radius: 10px; 
     width: 80vw;
+    margin-top: 2vh
 }
   
 #tabla table {
@@ -593,13 +598,11 @@ input[type="submit"]:hover {
 #fpoblacion {
     flex: 1;
     margin-right: 80px;
-
 }
 
 #meses {
     flex: 1;
     margin-right: 80px;
-
 }
 
 #conducir {
@@ -607,50 +610,61 @@ input[type="submit"]:hover {
     margin-right: 80px;
 }
 
-
-
-
 /*CSS PARA LA PÁGINA GESTIÓN ALUMNOS DESDE LA PANTALLA DEL ADMIN*/
-#filtros { 
+#filtross { 
     display: flex; 
     flex-direction: row; 
-    width: 100%; 
-    height: 150px; 
+    justify-content: space-between;
+    margin-left: 2vw;
+    margin-right: 2vw;
 } 
 #buscador { 
     flex: 1; 
-    background-color: yellowgreen; 
 } 
 #añonacimiento { 
     flex: 1; 
-    background-color: yellow; 
 } 
-#conducir { 
+#conducirr { 
     flex: 1; 
-    background-color: aqua; 
 } 
 #poblacion { 
     flex: 1; 
-    background-color: blue; 
 } 
+#nombreBusqueda{
+    width: 7vw;
+}
 
+#filtrarPorNombre{
+    background-color: #5585d8;
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
 
+#filtrarPorNombre:hover{
+    background-color: #6da2ff;
+}
 
+#filtrarPorAnio{
+    background-color: #5585d8;
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#filtrarPorAnio:hover{
+    background-color: #6da2ff;
+}
 
 
 

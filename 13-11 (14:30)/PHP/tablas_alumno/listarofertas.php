@@ -4,14 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alumno</title>
-    <link rel="stylesheet" href="../../CSS/listados.css">
+    <link rel="stylesheet" href="../../CSS/index.css">
 
-    <?php
-        include("../includes/conexion.php");
-        include("../includes/funciones.php");
-      
-    ?>
-    <style>
+    <!-- <style>
        
 h1{
     color: black;
@@ -58,23 +53,25 @@ input[type="submit"] {
     border: 1px solid #ddd;
     padding: 10px;
     margin: 10px 0;
-    background-color: #568c98;
+ 
    
 }
-    </style>
+    </style> -->
 </head>
+
+<?php
+    include("../includes/conexion.php");
+    include("../includes/funciones.php");
+?> 
+
+<?php include ("../includes/cabecera_registrado.php"); ?>
 <body>
-    
-<header>
-
-<?php include "../includes/cabecera_alumno.php" ?> 
-
-
-</header>
-      
-  
+    <!-- Navegación de migas de pan -->
+    <ul class="breadcrumb">
+        <li><a href="../paginas_inicio/PaginaAlumno.php">Menú</a></li>
+        <li>Buscar Ofertas</li>
+    </ul> 
   <aside class="filtros">
-    <h1>FILTROS</h1>
     <div id="divfiltros">
        
         <div id="foblacion">
@@ -95,7 +92,6 @@ input[type="submit"] {
                 <input type="submit" name="filtrarsector" value="Filtrar">
             </form>
         </div>
- 
   </aside>
 
   <article class="article">
@@ -123,4 +119,6 @@ input[type="submit"] {
     </article>
 
 </body>
+<?php include ("../includes/footer.php"); ?>
+
 </html>

@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/login.css">
+    <link rel="stylesheet" href="../../CSS/index.css">
     <title>Inicio de Sesión</title>
 
 </head>
+<?php include("../includes/cabecera.php"); ?>
 <body>
-<?php 
-
-
-include "../includes/cabecera.php" ?>
     <main>
         <div class="login-container">
             <div class="logo">
@@ -28,19 +25,17 @@ include "../includes/cabecera.php" ?>
                     <br>
                     <input type="submit" name="Acceder" value="Acceder">
                 </form>
-                
+                <!-- <?php echo "<p class= 'bad'> $mensaje; </p>"?> -->
             </div>
             <div class="crear_cuenta">
                 <a href="../registrar/crearusuario.php"><h5>¿No tienes cuenta? Regístrate</h5></a>
                 <a href="recuperarPassword.php"><h5>¿Has olvidado tu contraseña? Recupérala</h5></a>
             </div>
         </div>
-        <?php
-
-    ?>
     </main>
+</body>
+
+</html>
 
 <?php include "../includes/footer.php" ?>
 
-</body>
-</html>

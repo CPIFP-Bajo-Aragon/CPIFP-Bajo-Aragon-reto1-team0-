@@ -1,6 +1,6 @@
 
 <style>
-       .bad {
+    .bad {
     display: inline-block;
     padding: 10px;
     background-color: rgb(238, 96, 96);
@@ -16,8 +16,6 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-
-
 
 
 include "../includes/conexion.php";
@@ -62,12 +60,20 @@ if (isset($_POST['Acceder'])) {
         } else {
             echo "Tipo de usuario no reconocido";
         }
+
     } else {
-       
         $mensaje = "ERROR DE AUTENTIFICACIÓN";
+        echo $mensaje;
     }
 }
 
+
+if (isset($_POST['logout'])) {
+
+session_destroy();
+header('Location: ../../index.php');
+exit(); 
+}
 
 
 ?>

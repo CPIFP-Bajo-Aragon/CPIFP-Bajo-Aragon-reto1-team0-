@@ -8,8 +8,6 @@
 <body>
     <?php
     include("../includes/cabecera_registrado.php");
-
-    include("../tablas_admin/listarusuarios.php");
     ?>
     
     <?php

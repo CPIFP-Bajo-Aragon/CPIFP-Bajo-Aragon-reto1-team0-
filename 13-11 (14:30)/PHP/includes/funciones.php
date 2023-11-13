@@ -401,7 +401,7 @@ function verificarusuario($conexion){
             }
         }
 //COSAS DE LOS ADMINISTRADORES
-    //Lisar usuarios admin
+    //Listar usuarios admin
 
 //Ofertas del admin
     //Listar ofertas Admin
@@ -445,7 +445,6 @@ function verificarusuario($conexion){
                             echo ("<button type='submit' name='editar' id='editar'><i class='fas fa-pencil-alt'></i></button>");
                             echo ("</form>");
                             echo ("</td>");
-
                     echo "</tr>";
                 }
                 
@@ -453,8 +452,7 @@ function verificarusuario($conexion){
                 echo ('<form action="listarofertas.php" method="post">');
                 paginar($max_filas_por_pagina, $conexion, $total_filas);
                 echo ('</form>');
-                
-                
+            
             } else {
                 // Mensaje si no se encuentran ofertas de trabajo
                 echo "<tr><td colspan='8'>No se encontraron ofertas de trabajo.</td></tr>";
@@ -532,7 +530,6 @@ function verificarusuario($conexion){
                     } else {
                         echo("Ha habido un error");
                     }
-
                     echo($id_estudio);
                 }
             }
@@ -780,6 +777,8 @@ function verificarusuario($conexion){
                             echo "<input type='hidden' name='id_usuario' value='$id'>";
                             echo "<input type='submit' name='guardar' value='Guardar'>";
                             echo "</form>";
+
+
                         }
                     }
                 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Publicar Oferta</title>
 </head>
 <body>
     
@@ -23,8 +23,6 @@
         <select id="puesto" name="puesto">
         <?php listaroficios($conexion); ?>
         </select><br><br>
-
-
 
         <label for="descripcion">Descripción:</label>
         <textarea id="descripcion_oferta" name="descripcion_oferta" rows="10" cols="50"></textarea><br><br>
