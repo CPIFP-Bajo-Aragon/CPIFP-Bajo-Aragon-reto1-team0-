@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../CSS/index.css">
 </head>
 <?php 
-   include("../login/verificarLogin.php");
+  
     ?>
 <body>
     <header>
@@ -17,7 +17,7 @@
             <a id="linkLogo" href="../../index.php"><h1><span class="naranja">BA</span>EMPLEA</h1></a>
         </div>
         <?php
-           
+          include("../login/verificarLogin.php");
             // echo "<p>HAS ACCEDIDO COMO: " . $_SESSION['tipoUsuario'] . "</p>";
             // echo "<img src='../../img/usuario.png' alt='' width='30' height='30'>" . $_SESSION['nombre_usuario'];
         ?>

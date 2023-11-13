@@ -463,6 +463,8 @@
 
 <?php include "../includes/footer.php" ?>
 
+<!-- Función para abrir la ventana modal -->
+
 <script>
     // Función para abrir la ventana modal
     function openModal(modalId) {
@@ -471,17 +473,17 @@
     }
 
     // Asigna la función openModal al botón de abrir modal para empresas
-    document.getElementById('openModalBtn').addEventListener('click', function() {
+    document.getElementById('openModalBtn').addEventListener('click', function () {
         openModal('myModalEmpresa');
     });
 
     // Asigna la función openModal al botón de abrir modal para ofertas
-    document.getElementById('openModal').addEventListener('click', function() {
+    document.getElementById('openModal').addEventListener('click', function () {
         openModal('myModalOfertas');
     });
 
     // Asigna la función openModal al botón de abrir modal para alumnos
-    document.getElementById('openBtn').addEventListener('click', function() {
+    document.getElementById('openBtn').addEventListener('click', function () {
         openModal('myModalAlumnos');
     });
 
@@ -491,19 +493,22 @@
         modal.style.display = 'none';
     }
 
-    // Asigna la función closeModal al span de cerrar modal para empresas
-    document.getElementById('myModalEmpresa').getElementsByClassName('close')[0].addEventListener('click', function() {
+    // Asigna la función closeModal al botón de cerrar modal para empresas
+    document.getElementById('myModalEmpresa').getElementsByClassName('close')[0].addEventListener('click', function () {
         closeModal('myModalEmpresa');
     });
 
-    // Asigna la función closeModal al span de cerrar modal para ofertas
-    document.getElementById('myModalOfertas').getElementsByClassName('close')[0].addEventListener('click', function() {
+    // Asigna la función closeModal al botón de cerrar modal para ofertas
+    document.getElementById('myModalOfertas').getElementsByClassName('close')[0].addEventListener('click', function () {
         closeModal('myModalOfertas');
     });
 
-    // Asigna la función closeModal al span de cerrar modal para alumnos
-    document.getElementById('myModalAlumnos').getElementsByClassName('close')[0].addEventListener('click', function() {
+    // Asigna la función closeModal al botón de cerrar modal para alumnos
+    document.getElementById('myModalAlumnos').getElementsByClassName('close')[0].addEventListener('click', function () {
         closeModal('myModalAlumnos');
     });
+</script>
+
+
 
 </script>

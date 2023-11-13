@@ -9,7 +9,7 @@
 </head>
 <?php include("../includes/funcionesAlumno.php"); ?>
 <?php include("../includes/cabecera_registrado.php"); ?>
-<?php include("../login/cabecera_registrado.php"); ?>
+
 
 <body>
     <!-- Navegación de migas de pan -->
