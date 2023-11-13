@@ -1,0 +1,20 @@
+/* ESTILOS PARA LISTAR OFERTAS DESDE LA VISTA DEL ALUMNO */
+.filtros {
+    background-color: #6b6868;
+    width: 30%;
+    display: inline-block; /* Agregada esta línea */
+}
+
+.article {
+    background-color: #cfc6c6;
+    width: 70%;
+    display: inline-block; /* Agregada esta línea */
+}
+
+.oferta {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
