@@ -1,0 +1,82 @@
+/*CSS CABECERA */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700;800;900&display=swap');
+
+.naranja{
+    color: #ff944e;
+}
+header {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left: 10px;
+    background-color: #1a9ab6;
+    color: #fff;
+    height: 10vh;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px; 
+    
+}
+a{
+    text-decoration: none;
+}
+h1{
+    color: white; 
+} 
+#linkLogo:visited{
+    color: white;
+}
+
+.logoEmpresa{
+    display: flex;
+    justify-content: flex-start;
+    width: 95%;
+}
+
+.iconosSesion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 5%;
+    padding-right: 10px;
+}
+
+#logoUser{
+    font-size: 50px;
+}
+#logoOut{
+    font-size: 80px; 
+    color: #ffffff;
+}
+
+
+
+ul, ol {
+    list-style:none;
+}
+
+
+.nav li a {
+    background-color:#000;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+.nav li a:hover {
+    background-color:#434343;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+.nav li ul li {
+    position:relative;
+}

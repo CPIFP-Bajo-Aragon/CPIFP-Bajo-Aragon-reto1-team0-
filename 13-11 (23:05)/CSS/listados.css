@@ -1,0 +1,49 @@
+       
+h1{
+    color: black;
+}
+aside.filtros {
+    float: left;
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white; 
+}
+
+
+
+article.article {
+    float: right;
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white; 
+}
+
+form {
+    margin-bottom: 10px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #568c98;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.oferta {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    
+   
+}
