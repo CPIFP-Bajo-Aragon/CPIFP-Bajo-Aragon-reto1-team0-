@@ -1,0 +1,35 @@
+
+/*ESTILOS PAGINA DATOS PERSONALES*/
+.formulariodatos {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+   
+}
+
+.titulo {
+    text-align: center;
+    color: #3498db; 
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9; 
+}
+

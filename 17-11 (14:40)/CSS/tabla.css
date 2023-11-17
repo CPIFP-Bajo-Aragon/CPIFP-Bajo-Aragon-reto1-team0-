@@ -1,0 +1,35 @@
+body {
+	font-family: Arial;
+}
+
+#main {
+	margin: 50px auto;
+	width: 800px;
+}
+
+table {
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	padding: 20px;
+}
+
+th {
+	background-color: #6ec1d6;
+	color: rgb(232, 236, 240);
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2; 
+}
+
+tr:nth-child(odd) {
+	background-color: #d9edf7; 
+}
+
+.titulo{
+	color: black;
+}
