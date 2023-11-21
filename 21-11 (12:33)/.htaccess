@@ -1,0 +1,60 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /bolsa_de_trabajo
+
+    RewriteRule ^inicio$ /index.php [L]
+
+
+    RewriteRule ^chat$ /PHP/chat/codigo.php [L]
+
+    RewriteRule ^verificar$ /PHP/login/verificarLogin.php [L]
+
+    RewriteRule ^registrar$ /PHP/registrar/crearusuario.php [L]
+
+    RewriteRule ^recuperacion$ /PHP/login/recuperarPassword.php [L]
+
+    RewriteRule ^pagina-admin$ /PHP/paginas_inicio/PaginaAdmin.php [L]
+   
+    RewriteRule ^pagina-empresa$ /PHP/paginas_inicio/PaginaEmpresa.php [L]
+    
+    RewriteRule ^pagina-alumno$ /PHP/paginas_inicio/PaginaAlumno.php [L]
+    
+    RewriteRule ^empresas-admin$ /PHP/tablas_admin/listarempresas.php [L]
+    
+    RewriteRule ^ofertas-admin$ /PHP/tablas_admin/listarofertas.php [L]
+
+    RewriteRule ^usuarios-admin$ /PHP/tablas_admin/listarusuarios.php [L]
+   
+    RewriteRule ^ofertas-alumno$ /PHP/tablas_alumno/listarofertas.php [L]
+    
+    RewriteRule ^resumen-alumno$ /PHP/tablas_alumno/resumen.php [L]
+    
+    RewriteRule ^curriculum-alumno$ /PHP/tablas_alumno/crearcurriculum.php [L]
+
+    RewriteRule ^datos-academicos-alumno$ /PHP/tablas_alumno/datosacademicos.php [L]
+
+    RewriteRule ^datos-personales-alumno$ /PHP/tablas_alumno/datospersonales.php [L]
+
+    RewriteRule ^estudios-alumno$ /PHP/tablas_alumno/estudios.php [L]
+
+    RewriteRule ^experiencia-laboral-alumno$ /PHP/tablas_alumno/experiencialaboral.php [L]
+
+    RewriteRule ^habilidades-alumno$ /PHP/tablas_alumno/habilidades.php [L]
+
+    RewriteRule ^idiomas-alumno$ /PHP/tablas_alumno/idiomas.php [L]
+   
+    RewriteRule ^buscar-alumno$ /PHP/tablasempresa/buscaralumno.php [L]
+    
+    RewriteRule ^publicar-oferta$ /PHP/tablasempresa/publicaroferta.php [L]
+    
+    RewriteRule ^resumen-empresa$ /PHP/tablasempresa/resumen.php [L]
+    
+    RewriteRule ^formulario-oferta$ /PHP/tablasempresa/procesarFormularioOferta.php [L]
+    
+    RewriteRule ^inicio-sesion$ /PHP/login/login.php [L]
+
+    RewriteRule ^perfil-empresa$ /PHP/tablasempresa/perfilEmpresa.php [L]
+
+    RewriteRule ^funciones-oferta$ /PHP/includes/funciones/funcionesadmin/funcionesoferta.php [L]
+
+</IfModule>

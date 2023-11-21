@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*ESTILOS PAGINA DATOS PERSONALES*/
+.formulariodatos {
+    width: 50%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+    max-height: 60vh; 
+}
+
+.todo {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    text-align: center;
+    color: #3498db; 
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9; 
+}
+
+/************************************************/
+/*CSS PARA EL LISTAR OFERTAS*/
+.oferta {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px; 
+    text-align: left;
+}
+h2 {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+p {
+    color: #666;
+    margin-bottom: 5px;
+}
+.fecha-publicacion {
+    font-weight: bold;
+} 
+.inscripcion {
+    margin-top: 10px;
+}
+.inscripcion input {
+    background-color: #3498db;  
+}
+.ya-inscrito {
+    color: #3498db; 
+    font-weight: bold;
+}
+/*Barra desplazamiento lateral*/
+.datosTabla, .article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+    max-height: 60vh; 
+} 
+
+/********************************************/
+/*CSS para la página de resumen del alumno*/
+aside.filtros {
+    float: left;
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white; 
+}
+
+article.article {
+    float: right;
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white; 
+}
+form {
+    margin-bottom: 10px;
+}
+input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+input[type="submit"] { 
+    background-color: #568c98;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.oferta {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+}
