@@ -1,0 +1,105 @@
+/* CSS CABECERA REGISTRADO */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.naranja {
+    color: #ff944e;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: #1a9ab6;
+    color: #fff;
+    height: 10vh;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+}
+
+#linkLogo:visited {
+    color: white;
+}
+
+.iconosSesion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+#logoUser {
+    padding-bottom: 30px;
+    /* Margin-left eliminado ya que la posición está controlada por flex */
+}
+
+#logoOut {
+    font-size: 80px;
+    color: #ffffff;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.nav {
+    margin-top: 10px;
+    list-style: none;
+}
+
+.nav li {
+    position: relative; /* Añadido para manejar submenús */
+}
+
+.nav li a {
+    background-color: #1a9ab6;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
+}
+
+.nav li a:hover {
+    background-color: #434343;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    top: 100%; /* Añadido para alinear submenús debajo de elementos principales */
+    left: 0;
+}
+
+.nav li:hover > ul {
+    display: block;
+}
+
+/* Submenú */
+#submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#logoUser:hover + #submenu {
+    display: block;
+}
+
+.ulCabecera{
+    margin-left: 60vw;
+}
