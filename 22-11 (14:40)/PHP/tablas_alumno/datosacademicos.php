@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Academicos</title>
+    <link rel="stylesheet" href="../../CSS/index.css">
+    <?php include("../includes/cabecera_registrado.php"); ?>
+</head>
+<body>
+
+    <!-- Navegación de migas de pan -->
+    <ul class="breadcrumb">
+        <li><a href="pagina-alumno">Menú</a></li>
+        <li>Datos Académicos</li>
+    </ul> 
+    
+
+
+    <main>
+        <div id="botoness">
+            <div id="ofertas">
+                <a href="experiencia-laboral-alumno">
+                    <button id="buttonn" class="custom-button">
+                        <i id="imggIconos" ></i><p class="parrafooIconos">EXPERIENCIA LABORAL</p>
+                    </button>  
+                </a> 
+            </div>
+
+            <div  id="resumen">
+                <a href="estudios-alumno">
+                    <button id="buttonn" class="custom-button">
+                        <i id="imggIconos" ></i><p class="parrafooIconos">ESTUDIOS</p>
+                    </button>   
+                </a>
+            </div>
+
+            <div id="curriculum">
+                <a href="idiomas-alumno">
+                    <button id="buttonn" class="custom-button">
+                        <i id="imggIconos" ></i><p class="parrafooIconos">IDIOMAS</p>
+                    </button>  
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+<?php include "../includes/footer.php" ?>
+</html>
+<script src="../../JS/tablas_alumno/datosacademicos.js"></script>
