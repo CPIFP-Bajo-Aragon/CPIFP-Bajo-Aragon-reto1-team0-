@@ -1,0 +1,47 @@
+/* Establece la fuente predeterminada para el cuerpo del documento como Arial */
+	body {
+		font-family: Arial;
+	}
+
+/* Estilos para el contenedor principal con id "main" */
+	#main {
+		/* Margen superior e inferior de 50 píxeles, centrado horizontalmente con un ancho de 800 píxeles */
+			margin: 50px auto;
+			width: 800px;
+	}
+
+/* Estilos para todas las tablas en el documento */
+	table {
+		/* Alineación del texto a la izquierda, colapsa los bordes de la tabla y ocupa el 100% del ancho disponible */
+			text-align: left;
+			border-collapse: collapse;
+			width: 100%;
+	}
+
+/* Estilos para las celdas de encabezado y de datos en la tabla */
+	th, td {
+		/* Relleno de 20 píxeles para las celdas de encabezado y de datos */
+			padding: 20px;
+	}
+
+/* Estilos específicos para las celdas de encabezado */
+	th {
+		/* Fondo azul y texto blanco para las celdas de encabezado */
+			background-color: #6ec1d6;
+			color: rgb(232, 236, 240);
+	}
+
+/* Estilos para filas pares en la tabla con fondo gris claro */
+	tr:nth-child(even) {
+		background-color: #f2f2f2; 
+	}
+
+/* Estilos para filas impares en la tabla con fondo azul claro */
+	tr:nth-child(odd) {
+		background-color: #d9edf7; 
+	}
+
+/* Estilos para elementos con clase "titulo" con texto de color negro */
+	.titulo{
+		color: black;
+	}

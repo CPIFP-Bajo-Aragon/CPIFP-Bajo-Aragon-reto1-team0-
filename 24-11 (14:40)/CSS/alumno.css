@@ -1,0 +1,231 @@
+/* Establece el margen y el relleno predeterminados a 0 para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el formulario con la clase .formulariodatos */
+    .formulariodatos {
+        /* Ancho del formulario */
+            width: 50%;
+        /* Ancho máximo del formulario para evitar que sea demasiado grande */
+            max-width: 600px;
+        /* Color de fondo del formulario */
+            background-color: #fff;
+        /* Relleno interno del formulario para dar espacio entre el contenido y los bordes */
+            padding: 20px;
+        /* Bordes redondeados para suavizar las esquinas del formulario */
+            border-radius: 10px;
+        /* Sombra que da una apariencia elevada al formulario */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* Se agrega una barra de desplazamiento vertical si el contenido excede la altura máxima */
+            overflow-y: auto; 
+        /* Altura máxima del formulario, se establece en el 60% de la altura de la ventana */
+            max-height: 60vh; 
+    }
+
+
+/* Estilos para todos los elementos con la clase .todo */
+    .todo {
+        /* Tipo de fuente para todo el documento */
+            font-family: 'Arial', sans-serif;
+        /* Elimina el margen predeterminado del cuerpo del documento */
+            margin: 0;
+        /* Elimina el relleno predeterminado del cuerpo del documento */
+            padding: 0;
+        /* Utiliza el modelo de caja flexible para alinear y justificar los elementos hijos */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    }
+
+/* Estilos para el elemento con la clase .titulo */
+    .titulo {
+        /* Alineación del texto al centro */
+            text-align: center;
+        /* Color del texto */
+            color: #3498db;
+    }
+
+/* Estilos para todos los elementos de entrada */
+    input {
+        /* Ancho completo del contenedor padre */
+            width: 100%;
+        /* Relleno interno de 10 píxeles */
+            padding: 10px;
+        /* Margen inferior de 15 píxeles para dar espacio entre los elementos de entrada */
+            margin-bottom: 15px;
+        /* El modelo de caja incluye el borde y el relleno, evitando que se exceda el ancho especificado */
+            box-sizing: border-box;
+        /* Borde de 1 píxel sólido de color #ccc */
+            border: 1px solid #ccc;
+        /* Bordes redondeados de 4 píxeles */
+            border-radius: 4px;
+    }
+
+/* Estilos específicos para el elemento de entrada de tipo "submit" */
+    input[type="submit"] {
+        /* Color de fondo azul */
+            background-color: #3498db;
+        /* Color del texto blanco */
+            color: white;
+        /* Cambia el cursor a una mano al pasar sobre el botón */
+            cursor: pointer;
+    }
+
+/* Estilos para el botón de envío al pasar el mouse sobre él */
+    input[type="submit"]:hover {
+        /* Cambia el color de fondo al pasar el mouse sobre el botón */
+            background-color: #2980b9;
+    }
+
+
+/************************************************/
+/* CSS PARA EL LISTAR OFERTAS */
+    /* Estilos para el contenedor de cada oferta */
+        .oferta {
+            /* Borde del contenedor de oferta */
+                border: 1px solid #ccc;
+            /* Relleno interno del contenedor de oferta */
+                padding: 10px;
+            /* Margen inferior entre ofertas */
+                margin-bottom: 20px; 
+            /* Alineación del texto a la izquierda */
+                text-align: left;
+        }
+
+    /* Estilos para los encabezados de nivel 2 en el contenedor de oferta */
+        h2 {
+            /* Color del texto */
+                color: #333;
+            /* Tamaño de fuente */
+                font-size: 1.5em;
+            /* Peso de la fuente en negrita */
+                font-weight: bold;
+            /* Margen inferior */
+                margin-bottom: 10px;
+        }
+
+    /* Estilos para los párrafos en el contenedor de oferta */
+        p {
+            /* Color del texto */
+                color: #666;
+            /* Margen inferior */
+                margin-bottom: 5px;
+        }
+
+    /* Estilos para la clase de fecha de publicación en el contenedor de oferta */
+        .fecha-publicacion {
+            /* Peso de la fuente en negrita */
+                font-weight: bold;
+        } 
+
+    /* Estilos para la sección de inscripción en el contenedor de oferta */
+        .inscripcion {
+            /* Margen superior */
+                margin-top: 10px;
+        }
+
+    /* Estilos para los inputs dentro de la sección de inscripción en el contenedor de oferta */
+        .inscripcion input {
+            /* Color de fondo del input */
+                background-color: #3498db;  
+        }
+
+    /* Estilos para el texto de "ya inscrito" en el contenedor de oferta */
+        .ya-inscrito {
+            /* Color del texto */
+                color: #3498db; 
+            /* Peso de la fuente en negrita */
+                font-weight: bold;
+        }
+
+    /* Estilos para la barra de desplazamiento lateral */
+        .datosTabla, .article {
+            /* Color de fondo */
+                background-color: #fff;
+            /* Relleno interno */
+                padding: 20px;
+            /* Bordes redondeados */
+                border-radius: 10px;
+            /* Sombra */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Barra de desplazamiento vertical si el contenido excede la altura máxima */
+                overflow-y: auto; 
+            /* Altura máxima */
+                max-height: 60vh; 
+        } 
+
+/********************************************/
+/* CSS para la página de resumen del alumno */
+    /* Estilos para la barra lateral de filtros */
+        aside.filtros {
+            /* Alineación a la izquierda */
+                float: left;
+            /* Ancho del 25% del contenedor padre */
+                width: 25%;
+            /* Relleno interno */
+                padding: 20px;
+            /* Modelo de caja incluye el borde y el relleno */
+                box-sizing: border-box;
+            /* Color de fondo blanco */
+                background-color: white; 
+        }
+
+    /* Estilos para el artículo principal */
+        article.article {
+            /* Alineación a la derecha */
+                float: right;
+            /* Ancho del 75% del contenedor padre */
+                width: 75%;
+            /* Relleno interno */
+                padding: 20px;
+            /* Modelo de caja incluye el borde y el relleno */
+                box-sizing: border-box;
+            /* Color de fondo blanco */
+                background-color: white; 
+        }
+
+    /* Estilos para el formulario dentro del artículo principal */
+        form {
+            /* Margen inferior */
+                margin-bottom: 10px;
+        }
+
+    /* Estilos para los inputs de tipo "text" y los select dentro del formulario */
+        input[type="text"], select {
+            /* Ancho completo */
+                width: 100%;
+            /* Relleno interno */
+                padding: 8px;
+            /* Margen */
+                margin: 5px 0;
+            /* Modelo de caja incluye el borde y el relleno */
+                box-sizing: border-box;
+        }
+
+    /* Estilos para el input de tipo "submit" dentro del formulario */
+        input[type="submit"] { 
+            /* Color de fondo azul */
+                background-color: #568c98;
+            /* Color del texto blanco */
+                color: white;
+            /* Relleno interno */
+                padding: 10px 15px;
+            /* Borde ninguno */
+                border: none;
+            /* Bordes redondeados */
+                border-radius: 4px;
+            /* Cambia el cursor a una mano al pasar sobre el botón */
+                cursor: pointer;
+        }
+
+    /* Estilos para el contenedor de oferta dentro del artículo principal */
+        .oferta {
+            /* Borde */
+                border: 1px solid #ddd;
+            /* Relleno interno */
+                padding: 10px;
+            /* Margen superior e inferior */
+                margin: 10px 0;
+        }

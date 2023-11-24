@@ -1,0 +1,152 @@
+/* Importa la fuente Montserrat desde Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700;800;900&display=swap');
+
+/* Establece el margen y el relleno predeterminados a 0 para todos los elementos */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+/* Clase para aplicar color naranja */
+    .naranja {
+        color: #ff944e;
+    }
+
+/* Estilos para la cabecera (header) */
+    header {
+        /* Utiliza un modelo de caja flexible con espacio entre elementos, alineación central y relleno */
+            display: flex; /* Utiliza un modelo de caja flexible para el contenedor */
+            justify-content: space-between; /* Distribuye el espacio disponible entre los elementos, colocándolos al principio y al final */
+            align-items: center; /* Alinea los elementos verticalmente en el centro del contenedor */
+            padding: 0 10px; /* Relleno de 0 píxeles en la parte superior e inferior, 10 píxeles en los lados derecho e izquierdo */
+        /* Color de fondo y texto de la cabecera */
+            background-color: #1a9ab6;
+            color: #fff;
+        /* Altura del 10% de la altura de la ventana */
+            height: 10vh;
+        /* Tipo de fuente Montserrat */
+            font-family: 'Montserrat', sans-serif;
+        /* Añade un relleno adicional en el lado derecho */
+            padding-right: 10px;
+    }
+
+/* Estilos para los enlaces */
+    a {
+        /* Elimina la decoración predeterminada de los enlaces (subrayado, etc.) */
+            text-decoration: none;
+    }
+
+    /* Estilos para el encabezado principal h1 */
+    h1 {
+        /* Color del texto blanco */
+            color: white;
+    }
+
+    /* Estilos para el enlace del logo visitado */
+    #linkLogo:visited {
+        /* Color del texto blanco para el enlace visitado */
+            color: white;
+    }
+
+
+/* Estilos para los iconos de sesión */
+.iconosSesion {
+    /* Utiliza un modelo de caja flexible con alineación central y justificación de espacio entre elementos */
+        display: flex; /* Utiliza un modelo de caja flexible para el contenedor */
+        align-items: center; /* Alinea los elementos verticalmente en el centro del contenedor */
+        justify-content: space-between; /* Distribuye el espacio disponible entre los elementos, colocándolos al principio y al final */
+    /* Añade relleno adicional en el lado derecho */
+        padding-right: 10px;
+}
+
+/* Estilos para el logo del usuario */
+    #logoUser {
+        /* Añade relleno adicional en la parte inferior */
+            padding-bottom: 30px;
+        /* Margen izquierdo eliminado ya que la posición está controlada por flex */
+    }
+
+/* Estilos para el logo de salir (cerrar sesión) */
+    #logoOut {
+        /* Tamaño de fuente de 80 píxeles para el elemento con id "logoOut" */
+            font-size: 80px;
+        /* Color del texto blanco para el elemento con id "logoOut" */
+            color: #ffffff;
+    }
+
+
+/* Estilos para listas sin viñetas */
+    ul,
+    ol {
+        list-style: none;
+    }
+
+/* Estilos para la navegación principal */
+    .nav {
+        /* Margen superior */
+            margin-top: 10px;
+        /* Elimina las viñetas de la lista */
+            list-style: none;
+    }
+
+/* Estilos para los elementos de la navegación principal */
+    .nav li {
+        /* Posición relativa añadida para manejar submenús */
+            position: relative;
+    }
+
+/* Estilos para los enlaces de la navegación principal */
+    .nav li a {
+        /* Color de fondo y texto de los enlaces */
+            background-color: #1a9ab6;
+            color: #fff;
+        /* Elimina la decoración del texto y añade relleno */
+            text-decoration: none;
+            padding: 10px 12px;
+        /* Muestra como bloque */
+            display: block;
+    }
+
+/* Estilos para los enlaces de la navegación principal al pasar el ratón */
+    .nav li a:hover {
+        background-color: #434343;
+    }
+
+/* Estilos para los submenús de la navegación principal */
+    .nav li ul {
+        /* No los muestra inicialmente */
+            display: none;
+       /* Posición absoluta con ancho mínimo y alineación debajo de los elementos principales */
+            position: absolute;
+        /* Ancho mínimo del submenú */
+            min-width: 140px;
+        /* Alinea el submenú en la parte inferior de los elementos principales */
+            top: 100%;
+        /* Alinea el submenú en el lado izquierdo del contenedor padre */
+            left: 0;
+    }
+
+/* Muestra el submenú al pasar el ratón sobre los elementos principales */
+    .nav li:hover > ul {
+        display: block;
+    }
+
+/* Estilos para el submenú */
+    #submenu {
+        /* Elimina las viñetas de la lista */
+            list-style: none;
+        /* Elimina el margen y el relleno predeterminados */
+            margin: 0;
+            padding: 0;
+    }
+
+/* Muestra el submenú al pasar el ratón sobre el logo del usuario */
+    #logoUser:hover + #submenu {
+        display: block;
+    }
+
+/* Estilos para la lista de cabecera */
+    .ulCabecera {
+        /* Margen izquierdo ajustado al 60% del ancho de la ventana */
+            margin-left: 60vw;
+    }

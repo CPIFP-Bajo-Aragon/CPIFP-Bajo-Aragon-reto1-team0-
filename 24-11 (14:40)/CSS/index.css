@@ -1,0 +1,943 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr 1fr;
+    height: 100vh;
+    overflow: hidden; /* Desactiva el desplazamiento en ambas direcciones */
+}
+
+/*CSS CABECERA */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700;800;900&display=swap');
+
+.naranja{
+    color: #ff944e;
+}
+
+header {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left: 10px;
+    background-color: #1a9ab6;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    color: white; 
+}
+
+#linkLogo:visited{
+    color: white;
+}
+
+.iconosSesion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logoUser{
+    font-size: 50px;
+}
+
+#logoOut{
+    font-size: 80px; 
+    color: #ffffff;
+}
+
+/*CSS FOOTER*/
+footer {
+    /*position: relative;*/
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    background-color: rgba(26, 154, 182, 0.3);
+    color: #fff;
+}
+
+.logos{
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    width: 30%;
+}
+#imagesfooter{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content:space-around ;
+    align-items: center;
+}
+/* 
+a i.fa-solid.fa-envelope:active {
+    color: white;
+} */
+
+.copy{
+    display: flex;
+    width: 40%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.unionEuropea{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 30%;
+}
+
+/* Estilos del contenedor principal */
+.container {
+    flex: 1;
+    display: flex;
+    grid-template-rows: 1fr 1fr;
+    background-image: url(../img/imagenFondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    font-size: 2em;
+    padding-left: 70px;
+}
+
+/* Estilos del contenido principal */
+.content {
+    display: flex;
+    height: 260px;            
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.boton2 {
+    background-color: #568c98;
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+} 
+
+/*CSS PARA RECUPERAR CONTRASEÑA*/
+.recuperarPassword {
+    background-color: rgba(180, 206, 224, 0.34) ;
+    color: #568c98;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 60vh;
+    width: 50vw;
+    margin-top: 5vh;
+}
+
+.recuperarPassword h2 {
+    font-size: 24px;
+}
+
+.recuperarPassword label {
+    display: block;
+    margin-top: 10px;
+}
+
+.recuperarPassword input[type="text"],
+.recuperarPassword input[type="password"] {
+    width: 15vw;
+    border: 1px solid #568c98;
+    border-radius: 5px;
+}
+
+.recuperarPassword input[type="submit"] {
+    background-color: #568c98;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.recuperarPassword input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Estilos para los enlaces dentro del formulario */
+.recuperarPassword a {
+    color: black;
+    text-decoration: none;
+}
+
+.recuperarPassword a:hover {
+    text-decoration: underline;
+}
+
+/*CSS PARA LAS MIGAS DE PAN*/
+/*CSS PARA BREADCRUMB*/
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+} 
+
+/*CSS PARA LA PANTALLA DEL LOGIN*/
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;       
+}
+.login-container {
+    background-color: rgba(180, 206, 224, 0.34);
+    color: #568c98;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+    width: 50vw;
+    margin-top: 10vh;
+} 
+
+.inicio_sesion h2{
+    margin-bottom: 3vh;
+}
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 15vw;
+    border: 1px solid #568c98;
+    border-radius: 5px;
+} 
+.login-container input[type="submit"] {
+    background-color: #568c98;
+    color: #fff;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.login-container input[type="submit"]:hover {
+    background-color: #555;
+} 
+.login-container a {
+    color: black;
+    text-decoration: none;
+}
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.crear_cuenta{
+    margin-top: 20px;
+    height: 20vh;
+}
+
+/*CSS FORMULARIO CREAR NUEVA CUENTA*/
+.crearUsuarioDIV {
+    /* background-color: rgba(180, 206, 224, 0.34) ; */
+    color: #568c98;
+    text-align: center;
+    /* max-width: 400px; */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    /* height: 50vh; */
+    /* width: 50vw; */
+    margin-top: 10vh;
+}
+
+.crearUsuarioDIV h2 {
+    font-size: 24px;
+}
+
+.crearUsuarioDIV label {
+    display: block;
+    margin-top: 10px;
+
+}
+
+.crearUsuarioDIV input[type="text"],
+.crearUsuarioDIV input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #568c98;
+    border-radius: 5px;
+}
+
+.crearUsuarioDIV input[type="submit"] {
+    background-color: #568c98;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.crearUsuarioDIV input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Estilos para los enlaces dentro del formulario */
+.crearUsuarioDIV a {
+    color: black;
+    text-decoration: none;
+}
+
+.crearUsuarioDIV a:hover {
+    text-decoration: underline;
+}
+
+/* css crear nuevo usuario */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #333;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 150px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/*FORMULARIO REGISTRO USUARIOS*/
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+/* Estilos específicos para cada columna */
+.column {
+    grid-column: span 1;
+}
+
+#campos_empresa {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 10px;
+    margin-left: 5vw
+}
+
+#campos_alumno {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 10px;
+    margin-left: 5vw
+}
+
+
+/*CSS PARA LA PÁGINA DE ADMINISTRADOR*/
+#botones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px; 
+    height: 70vh; 
+    margin-left: 50px;
+}
+
+.custom-button {
+    background-color: lightblue;
+    padding: 60px 60px; 
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.parrafoIconos{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 30px;
+    /* margin-top: 40px; */
+    margin-left: 2%;
+}
+
+#imgIconos{
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 80px;
+}
+
+/*CSS PARA MENU DE LA EMRPESA*/
+#botoness {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px; 
+    height: 70vh; 
+    margin-left: 50px;
+    flex-wrap: wrap;
+
+    
+} 
+
+
+#imggIconos{
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}  
+
+.parrafooIconos{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 2%;
+}
+
+/*CSS PARA LA PÁGINA GESTIÓN EMPRESAS DESDE LA PANTALLA DEL ADMIN*/
+.titulo{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+} 
+
+#divfiltros{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+}
+#buscador{
+    width:150px;
+}
+
+
+#tabla {
+    text-align: center; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    width: 80vw;
+    margin-top: 2vh
+}
+  
+#tabla table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tabla table, #tabla th, #tabla td {
+    border: 1px solid #ddd;
+}
+  
+#tabla th, #tabla td {
+    padding: 8px;
+}
+ 
+#tabla th {
+    background-color: #f2f2f2; 
+}
+  
+/* Estilos para las filas impares */
+#tabla table tr:nth-child(odd) {
+    background-color: #f7f7f7; 
+}
+  
+/* Estilos para las celdas de opciones */
+#tabla .opciones {
+    background-color: #e6e6e6;
+}
+
+/* Estilos para las celdas de "Requiere Carnet de Conducir" */
+#tabla .requiere-carnet {
+    background-color: #e6e6e6;
+}
+  
+/* Estilos para la última columna (Empresa) */
+#tabla .empresa {
+    background-color: #e6e6e6; 
+}
+
+#filtros{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+}
+
+#filtroTitulo{
+    flex: 1;
+}
+
+#fpoblacion {
+    flex: 1;
+    margin-right: 80px;
+}
+
+#meses {
+    flex: 1;
+    margin-right: 80px;
+}
+
+#conducir {
+    flex: 1;
+    margin-right: 80px;
+}
+
+/*CSS PARA LA PÁGINA GESTIÓN ALUMNOS DESDE LA PANTALLA DEL ADMIN*/
+.filtross { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}   
+#filtrossa{
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+#nombreBusqueda{
+    width: 100px;
+} 
+
+#filtrarPorNombre{
+    background-color: #5585d8;
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+#filtrarPorNombre:hover{
+    background-color: #6da2ff;
+}
+
+#filtrarPorAnio{
+    background-color: #5585d8;
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+} 
+
+#filtrarPorAnio:hover{
+    background-color: #6da2ff;
+}
+
+
+/*CSS VENTANAS MODALES  DEL ADMINSTRADOR*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 70%;
+    max-width: 700px; 
+    max-height: 80vh; 
+    overflow-y: auto; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-content input {
+    width: calc(100% - 5px); 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    box-sizing: border-box;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+label{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/*Estilos para el botón de insertar empresa*/
+#openModalBtn{
+    color: #555; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/*Estilos para el botón de insertar oferta*/
+#openModal{
+    color: #555; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/*Estilos para el botón de insertar alumno*/
+#openBtn{
+    color: #555; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* Estilos para el botón de insertar datos del modal de empresa */
+#insertempresa {
+    background-color: #1a9ab6;
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+#insertempresa:hover {
+    background-color: #207689; 
+}
+
+.botonesAbrirModal{
+    align-items: center;
+    margin-top: 2vh;
+}
+
+/*Estilos para el botón de insertar datos del modal ofertas*/
+#insertoferta{
+    background-color: #1a9ab6;
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+#insertoferta:hover{
+    background-color: #207689;
+}
+
+/*Botón agregar idioma de la modal ofertas*/
+#agregarIdioma{
+    background-color: #5585d8;
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+#agregarIdioma:hover{
+    background-color: #6da2ff;
+}
+
+/*Botón agregar experiencia de la modal ofertas*/
+#agregarExperiencia{
+    background-color: #5585d8;
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+#agregarExperiencia:hover{
+    background-color: #6da2ff;
+}
+
+/*Botón agregar estudio de la modal ofertas*/
+#agregarestudio{
+    background-color: #5585d8;
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+#agregarestudio:hover{
+    background-color: #6da2ff;
+}
+
+/*Estilos para el botón de insertar datos del modal alumno*/
+#insertalumno{
+    background-color: #1a9ab6;
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+#insertalumno:hover{
+    background-color: #207689;
+}
+#logo_User{
+    font-size: 50px;
+}
+#logo_Out{
+    font-size: 70px; 
+    color: #ffffff;
+}
+
+/********************************************************/
+
+/*CSS PARA LA PÁGINA DE PUBLICAR OFERTAS DEL USUARIO EMPRESA*/
+.todo {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 50%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+    max-height: 60vh; 
+}   
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#publicarOferta{
+    background-color: #5585d8;
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+    
+#publicarOferta:hover{
+    background-color: #6da2ff;
+}  
+
+#titulo, #duracion_contrato, #experiencia {
+    width: calc(100% - 16px); 
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+/*ESTILOS PAGINA DATOS PERSONALES DE EMPRESA*/
+.formulariodatos {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+   
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9; 
+}
+/*******************************************/
+/*CSS PARA LA PESTAÑA DE HABILIDADES DEL USUARIO ALUMNO*/
+.habilidades {
+    text-align: center;
+}
+
+textarea {
+    width: 80%;
+    max-width: 40vw;
+    border: 1px solid black;
+}
+
+#carnetDiv {
+    margin-top: 16px; 
+}
+
+.titulosHabilidades{
+    margin-top: 2%;
+}
+
+.parrafoHabilidades{
+    text-align: center;
+}
+
+/*Menaje error*/
+.bad {
+    background-color: rgb(221, 83, 83);
+    margin-bottom: 30px;
+     color: rgb(250, 250, 250);
+     font-weight: bold;
+     padding: 10px;
+ }
+
+
