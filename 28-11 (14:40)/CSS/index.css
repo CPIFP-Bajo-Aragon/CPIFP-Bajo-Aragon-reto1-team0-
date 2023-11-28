@@ -1,0 +1,1837 @@
+
+/*ESTILOS GENERALES */
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 10fr 1fr; /* Corrige el uso de corchetes para definir las filas */
+    }
+/*CSS PARA LAS MIGAS DE PAN*/
+    ul.breadcrumb {
+        padding: 10px 16px;
+        list-style: none;
+        text-align: center;
+    }
+
+    ul.breadcrumb li {
+        display: inline;
+        font-size: 14px;
+    }
+
+    ul.breadcrumb li+li:before {
+        padding: 8px;
+        color: black;
+        content: "/\00a0";
+    }
+
+    ul.breadcrumb li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    } 
+
+/*ESTILOS DE LA CABECERA SIN REGISTRAR */
+
+    /* Estilos para el contenedor del logo */
+        #Contenedordellogo {
+            max-width: 15%; /* Establece un ancho máximo para el contenedor del logo */
+        }
+
+    /* Estilos para el contenedor general del encabezado */
+        .cont {
+            background-color: #1a9ab6; /* Color de fondo para el encabezado */
+            color: white; /* Color del texto */
+            padding: 1vw; /* Relleno alrededor del contenido del encabezado */
+            display: grid; /* Utiliza el diseño de cuadrícula CSS para el encabezado */
+            grid-template-columns: 0.1fr 1fr auto;
+            align-items: center; /* Alinea los elementos verticalmente en el centro */
+          
+        }
+
+    /* Estilos para el enlace del logo */
+        #linkLogo {
+            text-decoration: none; /* Elimina las subrayas del enlace */
+            color: white; /* Color del texto para el enlace */
+        }
+
+    /* Estilos para el título del encabezado (h1) */
+        h1 {
+            margin: 0; /* Elimina el margen predeterminado para h1 */
+            font-size: 24px; /* Establece el tamaño de fuente para el título */
+            text-align: center;
+        }
+
+    /* Estilos para el span naranja en el título */
+        .naranja {
+            color: orange; /* Color del texto para el span naranja */
+        }
+
+    /* Estilos para el botón de registro */
+        .botonR {
+            background-color: orange; /* Color de fondo para el botón */
+            color: white; /* Color del texto para el botón */
+            border: none; /* Elimina el borde */
+            padding: 10px 20px; /* Relleno dentro del botón */
+            text-align: center; /* Centra el texto en el botón */
+            text-decoration: none; /* Elimina las subrayas del botón */
+            display: inline-block; /* Hace que el botón sea un elemento en línea */
+            font-size: 16px; /* Establece el tamaño de fuente para el texto del botón */
+            cursor: pointer; /* Cambia el cursor a un puntero al pasar el mouse */
+            border-radius: 5px; /* Agrega esquinas redondeadas al botón */
+        }
+
+    /* Estilos para el botón al pasar el mouse */
+        .botonR:hover {
+            background-color: darkorange; /* Cambia el color de fondo al pasar el mouse */
+        }
+
+/*ESTILOS DE LA CABECERA DE UN REGISTRADO*/
+/* Estilos para la sección de encabezado */
+.cab {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas: logotipo, contenido del usuario/menú, y logout */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a9ab6;
+    padding: 10px;
+}
+
+/* Estilos adicionales para el botón de logout */
+#logout {
+    text-align: right; /* Alinea el botón a la derecha dentro de su columna */
+}
+
+.logout {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px; /* Agrega esquinas redondeadas al botón */
+
+}
+
+.logout:hover {
+    background-color: darkorange;
+}
+ul.ulCabecera {
+    list-style: none;
+}
+ul#submenu {
+    display: none;
+    list-style: none;
+    
+}
+ul.ulCabecera:hover ul#submenu {
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.nav { 
+    list-style: none;   
+}
+
+.nav li {
+    position: relative; 
+}
+
+
+.nav li a {
+   
+         background-color: #1a9ab6;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 12px;
+        display: block;
+}
+
+
+.nav li a:hover {
+    background-color: #434343;
+}
+
+
+.nav li ul {
+        display: none;
+        position: absolute;
+        min-width: 140px;
+        top: 100%;
+        left: 0;
+}
+
+
+.nav li:hover > ul {
+    display: block;
+}
+
+
+#submenu {
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+}
+
+#logoUser{
+    color:#fff;
+}
+
+#logoUser:hover + #submenu {
+    display: block;
+   
+    
+}
+
+
+.ulCabecera {
+        margin-left: 60vw;
+}
+
+/*ESTILOS DEL FOOTER*/
+    /* Estilos generales para el footer */
+        footer {
+            background-color: rgba(26, 154, 182, 0.3);
+            /* Color de fondo para el pie de página */
+            color: rgba(0, 0, 0, 0.5); /* Color del texto */
+          /* Relleno alrededor del contenido del pie de página */
+            display: grid; /* Utiliza el diseño de cuadrícula CSS para el pie de página */
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas con el mismo ancho */
+            gap: 20px; /* Espacio entre las columnas */
+            align-items: center; /* Alinea los elementos verticalmente en el centro */
+        }
+
+    /* Estilos para la sección de logos en el footer */
+        .logos {
+            display: flex; /* Utiliza un diseño de caja flexible para los logos */
+            justify-content: center; /* Centra los logos horizontalmente */
+        }
+
+    /* Estilos para los enlaces de los logos */
+        .logos a {
+            color: rgba(0, 0, 0, 0.5); /* Color del texto del enlace */
+            margin: 0 10px; /* Márgenes entre los logos */
+        }
+
+    /* Estilos para el ícono de sobre (enlace de correo) */
+        .logos a i.fa-envelope {
+            font-size: 24px; /* Tamaño del ícono */
+        }
+
+    /* Estilos para el ícono de teléfono (enlace de teléfono) */
+        .logos a i.fa-phone {
+            font-size: 24px; /* Tamaño del ícono */
+        }
+
+    /* Estilos para el ícono de Instagram */
+        .logos a i.fa-instagram {
+            font-size: 24px; /* Tamaño del ícono */
+        }
+
+    /* Estilos para la sección de derechos de autor en el footer */
+        .copy {
+            text-align: center; /* Centra el texto horizontalmente */
+        }
+
+    /* Estilos para las imágenes en el footer */
+        #imagesfooter {
+            display: grid; /* Utiliza el diseño de cuadrícula CSS para las imágenes */
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas con el mismo ancho */
+            gap: 20px; /* Espacio entre las columnas */
+        }
+
+    /* Estilos para el logo de nuestra empresa */
+        .nuestroLogo img {
+            width: 80px; /* Ancho de la imagen */
+            height: 80px; /* Altura de la imagen */
+            padding-top: 5px; /* Espaciado superior */
+        }
+
+    /* Estilos para el logo de la Unión Europea */
+        .unionEuropea img {
+            width: 150px; /* Ancho de la imagen */
+            height: 30px; /* Altura de la imagen */
+        }
+
+/*ESTILOS DE LA PAGINA PRINCIPAL */
+    #mainindex{
+        display: grid;
+        grid-template-rows: 7fr 2fr;
+       
+      
+    }
+    .mainindex {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../img/imagenFondo.png);
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      
+    }
+
+    /*colocar gris encima imagen para que se vea bien*/
+.mainindex::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Fondo grisáceo transparente */
+    background-color: rgba(0, 0, 0, 0.5); 
+    
+   
+}
+
+.mainindex .container {
+    position: relative;
+    /* Asegura que el contenido esté encima del fondo */
+    z-index: 2; 
+
+
+
+}
+
+    #mainindex aside h1 {
+        font-size: 5rem;
+        margin-top: 8%; /* Ajusta el margen superior e inferior según tus preferencias */
+        padding: 10px;
+        color: white;
+    }
+    .aside{
+        background-color: #FFF; 
+        flex-grow: 3;
+        padding: 20px;
+       text-align: center;
+    }
+
+    #mainindex article{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+.boton2 {
+    background-color: #1a9ab6;
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+} 
+
+/*ESTILOS DEL LOGIN*/
+    .login-container {
+        text-align: center;
+        
+        width: 40vh;
+        background-color: rgba(26, 154, 182, 0.2);
+        border-radius: 10px
+    }
+
+    .inicio_sesion{
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    #mainlogin {
+        display: flex;
+        justify-content: center; /* Centra los elementos horizontalmente */
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+    a {
+        text-decoration: none;
+        color:#333;
+    }
+    input.inputlogin {
+      
+        box-sizing: border-box; 
+       
+       
+        margin: 10px 0;
+        padding: 10px; 
+        border-radius: 4px;
+    }
+
+    input.accederlogin:hover {
+        background-color: darkblue;
+    }
+
+    input.accederlogin {
+        width: 15vh;
+        height: 3vh;
+        background-color: #1a9ab6;
+        color: white;
+        border: none; 
+        border-radius: 4px;
+    }
+
+
+    .bad {
+        background-color: rgb(255, 101, 101);
+        margin-bottom: 30px;
+         color: white;
+         font-weight: bold;
+         padding: 20px;
+     } 
+/*ESTILOS DE RECUPERAR CONTRASEÑA*/
+.recuperarPassword {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(26, 154, 182, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+#h2RecuperarPassword{
+    text-align: center;
+    color: #1a9ab6;
+}
+
+#formulariorecuperar {
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+.labelRecuperarPassword {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.inputRecuperarPassword {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cambiarPassword {
+    background-color: #1a9ab6;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    width: 15em;
+    text-align: center;
+    align-items: center;
+    padding: 0.5em;
+    margin-left: 4em;
+}
+  
+.inputRecuperarPassword {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 8px;
+}
+
+/*CREAR UN NUEVO USUARIO*/
+    
+    /* Estilos para el contenedor del formulario de registro */
+    #formulario_de_registrar {
+        width: 50vh; /* Ancho del 50% del viewport height */
+        height: 60vh; /* Altura del 50% del viewport height */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px; /* Relleno interno de 15 píxeles */
+        overflow: auto; /* Habilita el desplazamiento vertical si el contenido excede la altura */
+        overflow-x: hidden; /* Evita el desbordamiento horizontal */
+        text-align: center;
+        background-color: rgba(26, 154, 182, 0.2);
+        border-radius: 10px;
+    }
+    /* Estilos para el contenedor 'ser' que alberga los botones de tipo de usuario */
+    #ser {
+        display: flex; /* Utilizamos flexbox para alinear los elementos en línea */
+    }
+    /* Estilos para los botones de tipo de usuario dentro de 'ser' */
+    #ser input {
+        display: inline-block; /* Muestra los elementos como bloques en línea */
+        width: auto; /* Ancho automático según el contenido */
+        padding: 55px; /* Relleno interno de 55 píxeles */
+        margin-right: 5%; /* Ajusta el espacio entre el botón y la etiqueta */
+    }
+    /* Estilos para las etiquetas de tipo de usuario dentro de 'ser' */
+    #ser label {
+        display: inline-block; /* Muestra las etiquetas como bloques en línea */
+        margin-left: 20%; /* Ajusta el espacio entre la etiqueta y el próximo botón */
+    }
+    #formulario_de_registrar input {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 8px; /* Espaciado interno de los campos de entrada */
+        margin-bottom: 16px; /* Espaciado inferior entre campos de entrada */
+        box-sizing: border-box; /* Incluye padding y borde en el tamaño total del elemento */
+    }
+    #formulario_de_registrar h2 {
+        color: #333; /* Color del texto del título */
+    }
+    #formulario_de_registrar label {
+        display: block; /* Muestra cada etiqueta en una línea nueva */
+        margin-bottom: 8px; /* Espaciado inferior entre etiquetas y campos de entrada */
+    }
+    #formulario_de_registrar input[type="submit"] {
+        background-color: orange; /* Color de fondo del botón */
+        color: white; /* Color del texto del botón */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    }
+    #formulario_de_registrar input[type="submit"]:hover {
+        background-color: darkorange;
+    }
+ #empresa, #alumno {
+        display: none;
+    }
+
+/*ADMIN*/
+    /*Pagina Admin*/
+        #mainpaginaadmin{
+            text-align: center;
+        }
+        #botones {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10%;
+        }
+
+        #button {
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #button:hover {
+            background-color: #2980b9;
+        }
+
+        #imgIconos {
+            margin-bottom: 10px;
+        }
+
+        .parrafoIconos {
+            margin: 0;
+        }
+        
+        .parrafooIconos {
+            margin: 0;
+            margin-top: 10%;
+        }
+
+        #empresabtn {
+            text-align: center;
+        }
+
+        #ofertasbtn {
+            text-align: center;
+        }
+
+        #Usuariosbtn {
+            text-align: center;
+        }
+        button.custom-button {
+            width: 300px;
+            height: 150px;
+        }
+    /*BOTONES DE INSERTAR*/
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 70%;
+        max-width: 700px; 
+        max-height: 80vh; 
+        overflow-y: auto; 
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+        text-align: center;
+    }
+
+    .modal-content input {
+        width: calc(100% - 5px); 
+        padding: 10px; 
+        margin-bottom: 10px; 
+        box-sizing: border-box;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        color: #555;
+    }
+    label{
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .botonesAbrirModal{
+        display: flex;
+        align-items: center;
+        margin-top: 2vh;
+    }
+
+        /*Estilos para el botón de insertar empresa*/
+        #openModalBtn{
+            color: #555; 
+            padding: 10px 20px; 
+            font-size: 16px;
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer;
+            margin-top: 5px;
+            align-self: center;
+            
+        }
+
+        /*Estilos para el botón de insertar oferta*/
+        #openModal{
+            color: #555; 
+            padding: 10px 20px; 
+            font-size: 16px;
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        /*Estilos para el botón de insertar alumno*/
+        #openBtn{
+            color: #555; 
+            padding: 10px 20px; 
+            font-size: 16px;
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+    /*Estiolos del formulario de empresa*/
+        #myModalEmpresa {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            background-color: ghostwhite; 
+            overflow: auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        #myModalEmpresa .modal-content {
+            position: relative;
+        }
+
+        
+        #myModalEmpresa .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        
+        #myModalEmpresa form {
+            display: grid;
+            gap: 10px;
+        }
+
+        #myModalEmpresa label {
+            font-weight: bold;
+        }
+
+        #myModalEmpresa input, #myModalEmpresa select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        
+        #myModalEmpresa button {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        #myModalEmpresa button:hover {
+            background-color: darkorange;
+        }
+
+        
+        #myModalEmpresa .close:hover {
+            color: red;
+        }
+    /*ESTILOS FORMULARIOS OFERTAS DE TRABAJO*/
+        #myModalOfertas {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            background-color: ghostwhite; 
+            overflow: auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        #myModalOfertas .modal-content {
+            position: relative;
+        }
+        
+        #myModalOfertas .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        #myModalOfertas form {
+            display: grid;
+            gap: 10px;
+        }
+        
+        #myModalOfertas label {
+            font-weight: bold;
+        }
+        
+        #myModalOfertas input, #myModalOfertas select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        
+        #myModalOfertas button {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        #myModalOfertas button:hover {
+            background-color: darkorange;
+        }
+        
+        #myModalOfertas .close:hover {
+            color: red;
+        }
+        #DIVEstudios,
+        #DIVIdiomas,
+        #DIVExperiencia {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        #DIVEstudios > div,
+        #DIVIdiomas > div,
+        #DIVExperiencia > div {
+            border-bottom: 1px solid #ddd;
+            padding: 5px;
+        }
+    /*INSERTAR ALUMNOS ADMIN*/
+        #myModalAlumnos {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: ghostwhite;
+            overflow: auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        #myModalAlumnos .modal-content {
+            position: relative;
+        }
+        
+        #myModalAlumnos .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        #myModalAlumnos form {
+            display: grid;
+            gap: 10px;
+        }
+        
+        #myModalAlumnos label {
+            font-weight: bold;
+        }
+        
+        #myModalAlumnos input,
+        #myModalAlumnos select,
+        #myModalAlumnos textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        
+        #myModalAlumnos button {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        #myModalAlumnos button:hover {
+            background-color: darkorange;
+        }
+        
+        #myModalAlumnos .close:hover {
+            color: red;
+        }
+
+
+    /*LISTAR EMPRESAS ADMIN*/
+        /* Estilos para la clase 'modal' que define la apariencia de una ventana modal */
+            .modal {
+                display: none; /* Oculta la ventana modal por defecto */
+                position: fixed; /* Fija la posición de la ventana en la pantalla */
+                top: 50%; /* Posiciona la ventana en el 50% desde la parte superior */
+                left: 50%; /* Posiciona la ventana en el 50% desde el lado izquierdo */
+                z-index: 1; /* Establece el índice z para la capa modal, mostrándola sobre otros elementos */
+                width: 70%; /* Ancho de la ventana modal */
+                max-width: 700px; /* Ancho máximo de la ventana modal */
+                max-height: 80vh; /* Altura máxima de la ventana modal en relación con la altura del viewport */
+                overflow-y: auto; /* Agrega desplazamiento vertical si el contenido excede la altura */
+                background-color: #fff; /* Color de fondo de la ventana modal */
+                padding: 20px; /* Relleno interno de la ventana modal */
+                border-radius: 8px; /* Bordes redondeados de la ventana modal */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para resaltar la ventana modal */
+            }
+
+        /* Estilos para el contenido dentro de la ventana modal */
+            .modal-content {
+                text-align: center; /* Centra el contenido horizontalmente dentro de la ventana modal */
+            }
+
+        /* Estilos para los inputs dentro del contenido de la ventana modal */
+            .modal-content input {
+                padding: 10px; /* Relleno interno del input */
+                margin-bottom: 10px; /* Margen inferior entre inputs */
+                box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total del input */
+            }
+
+        /* Estilos para el botón de cierre (close) en la esquina superior derecha de la ventana modal */
+            .close {
+                position: absolute; /* Posiciona el botón de cierre de manera absoluta */
+                top: 10px; /* Espacio superior del botón de cierre desde la parte superior */
+                right: 10px; /* Espacio derecho del botón de cierre desde el lado derecho */
+                font-size: 20px; /* Tamaño de fuente del botón de cierre */
+                cursor: pointer; /* Establece el cursor a 'pointer' para indicar que es interactivo */
+                color: #555; /* Color del botón de cierre */
+            }
+
+        /* Estilo para el título principal */
+        .titulo {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #mainlistarempresasadmin h1{
+            text-align: center;
+        }
+        /* Estilo para los formularios de filtro con grid */
+        #mainlistarempresasadmin #divfiltros {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 10px; 
+            margin-bottom: 20px;
+            margin-left: 15%;
+        }
+
+        #mainlistarempresasadmin    #fbuscador,
+        #mainlistarempresasadmin    #foblacion,
+        #mainlistarempresasadmin #fsector,
+        #mainlistarempresasadmin #fvalidar {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para el input de búsqueda */
+        #mainlistarempresasadmin #buscador {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Estilo para los selects de filtro */
+        #mainlistarempresasadmin #poblacionSelect,
+        #mainlistarempresasadmin #sectorSelect {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Estilo para los radio buttons de filtro */
+        #mainlistarempresasadmin #validado,
+        #mainlistarempresasadmin #sinvalidar,
+        #mainlistarempresasadmin #todos {
+            margin-right: 5px;
+        }
+        #mainlistarempresasadmin #tabla {
+            margin-left: 8%;
+            overflow-x: auto; /*evita que la tabla sobre salga del div asignado añadiendo un escrol horizontal */
+            margin-right: 10%;
+        }
+
+        /* Estilo para la tabla con grid */
+        #mainlistarempresasadmin table {
+            width: 100%;
+            border-collapse: collapse;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+        #mainlistarempresasadmin table #encabezado{
+            color: white;
+            background-color: #3498db;
+        }
+
+        #mainlistarempresasadmin th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        /* Estilo para la fila de encabezado de la tabla */
+        #mainlistarempresasadmin th {
+            background-color: #3498db;
+        }
+        #mainlistarempresasadmin tr:hover {
+            background-color: darkgray;
+          }
+
+    /*lISTAR OFERTAS*/
+        .tituloOFERTAadmin{
+            text-align: center;
+        }
+    
+        #listarofertasadmin {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        #listarofertasadmin .titulo {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #filtros {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            margin-top: 10px;
+            gap: 10px;
+            /* margin-bottom: 20px; */
+        }
+
+        /* #filtros > div {
+            margin-bottom: 10px;
+            margin-top: 10%;
+        } */
+
+        /* Estilo para los filtros */
+        #fbusqueda input,
+        #poblacionSelect,
+        #meses input,
+        #conducir input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        #meses label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #conducir {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilo para la tabla con grid */
+        #listarofertasadmin #tabla table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        #listarofertasadmin #tabla th,
+        #listarofertasadmin #tabla td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        /* Estilo para la fila de encabezado de la tabla */
+        #listarofertasadmin #tabla th {
+            color: white;
+            background-color: #3498db;
+        }
+        #listarofertasadmin tr:hover {
+            background-color: darkgray;
+          }
+    /*LISTAR ALUMNOS*/
+        #listaralumnosadmin {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+
+        #listaralumnosadmin .titulo {
+            color: #333;
+            text-align: center;
+        }
+
+        #listaralumnosadmin .filtross {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        
+
+        #listaralumnosadmin #nombreBusqueda {
+            padding: 5px;
+            width: 100%;
+        }
+
+        #listaralumnosadmin #conducirr input,
+        #listaralumnosadmin #conducirr br {
+            display: inline;
+        }
+
+        #listaralumnosadmin #poblacionSelect {
+            width: 100%;
+            padding: 5px;
+        }
+
+        #listaralumnosadmin #fvalidar input,
+        #listaralumnosadmin #fvalidar br {
+            display: inline;
+        }
+
+        #listaralumnosadmin #tabla {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        #listaralumnosadmin #tabla th, #listaralumnosadmin #tabla td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            
+        }
+
+        #listaralumnosadmin #tabla th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        #listaralumnosadmin #tabla tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #listaralumnosadmin #tabla tr:hover {
+            background-color: #ddd;
+        }
+
+/*EMPRESA*/
+
+    /*PAGINA INICIAL DE EMPRESA*/
+        #mainpaginaempresas{
+            text-align: center;
+        }
+        #mainpaginaempresas #botoness {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10%;
+        }
+
+        #mainpaginaempresas #buttonn {
+            background-color: orange;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+}
+
+        #mainpaginaempresas #buttonn:hover {
+            background-color: darkorange;
+        }
+
+        #mainpaginaempresas #imggIconos {
+            margin-bottom: 10px;
+        }
+
+        #mainpaginaempresas button.custom-button {
+            width: 300px;
+            height: 150px;
+        }
+
+    /*LISTAR USUARIOS DESDE EMPRESA*/
+        #buscaralumnoempresas {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+
+        #buscaralumnoempresas .titulo {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #buscaralumnoempresas #filtrossa {
+            margin-bottom: 20px;
+            display: grid;
+            
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        #buscaralumnoempresas #nombreBusqueda {
+            width: 200px;
+            padding: 5px;
+        }
+
+        #buscaralumnoempresas #conducirr {
+            margin-top: 10px;
+        }
+
+        #buscaralumnoempresas #poblaciondiv select {
+            width: 200px;
+            padding: 5px;
+        }
+
+        #buscaralumnoempresas table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        #buscaralumnoempresas th, #buscaralumnoempresas td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #buscaralumnoempresas th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        #buscaralumnoempresas tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    /*PUBLICAR OFERTAS*/
+        #container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        #header {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            text-align: auto;
+        }
+
+        #content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        #publicarofertaempresa {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Añadida la propiedad overflow-y aquí */
+            max-height: 500px;
+        }
+        #publicarofertaempresa .todo {
+            margin-top: 20px;
+        }
+
+        #publicarofertaempresa form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #publicarofertaempresa .label {
+            font-weight: bold;
+        }
+
+        #publicarofertaempresa input[type="text"],
+        #publicarofertaempresa select,
+        #publicarofertaempresa textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        #publicarofertaempresa button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #publicarofertaempresa button:hover {
+            background-color: darkorange;
+        }
+
+    
+    /*HISTORICO DE LAS OFERTAS PUBLICADAS*/
+        #mainofertaspublicadasempresa {
+            /* Agrega tus estilos personalizados aquí */
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        #mainofertaspublicadasempresa .titulo {
+            /* Estilos para el título */
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        #mainofertaspublicadasempresa #tabla {
+            /* Estilos para la tabla */
+            margin-top: 20px;
+        }
+
+        #mainofertaspublicadasempresa table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        #mainofertaspublicadasempresa    th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #mainofertaspublicadasempresa    th {
+            background-color: #f2f2f2;
+        }
+
+        #mainofertaspublicadasempresa .btn_inscritos {
+            /* Estilos para el botón de alumnos inscritos */
+            background-color: #4caf50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .botonPerfil {
+            background-color: #3498db; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    /*DATOS PERSONALES DE LA EMPRESA*/
+        #pefilEmpresas {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        #pefilEmpresas    .formulariodatos {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #pefilEmpresas    label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        #pefilEmpresas    input[type="text"],
+        #pefilEmpresas textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #pefilEmpresas    textarea {
+            resize: vertical;
+        }
+
+        #pefilEmpresas    input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #pefilEmpresas    input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+/*ALUMNOS*/
+        /*PAGINA INICIO ALUMNO*/
+                #mainpaginaalumno .paginasInicio {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100vh;
+                }
+                #mainpaginaalumno .inicio{
+                    padding-top: 7vh;
+                    flex: 1;
+                }
+                #mainpaginaalumno{
+                    text-align: center;
+                }
+                #mainpaginaalumno #botoness {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 10%;
+                }
+
+                #mainpaginaalumno #buttonn {
+                    background-color: #3498db;
+                    color: #ffffff;
+                    border: none;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+
+                #mainpaginaalumno #buttonn:hover {
+                    background-color: #2980b9;
+                }
+
+                #mainpaginaalumno #imggIconos {
+                    margin-bottom: 10px;
+                }
+
+                #mainpaginaalumno button.custom-button {
+                    width: 300px;
+                    height: 150px;
+                }
+
+                /*PAGINAS DATOS ACADEMICOS*/
+                .datosacademicos  {
+                    margin: 50px auto;
+                    width: 800px;
+                  
+                }
+              
+                #maindatosacademicos{
+                    text-align: center;
+                    align-items: center;
+                }
+                #maindatosacademicos #botoness {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    gap: 20px; 
+                    height: 70vh; 
+                    margin-left: 50px;
+                    flex-wrap: wrap;
+                }
+
+                #maindatosacademicos #buttonn {
+                    background-color: #3498db;
+                    color: #ffffff;
+                    border: none;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+
+                #maindatosacademicos #buttonn:hover {
+                    background-color: #2980b9;
+                }
+
+              
+
+
+        /*PAGINA BUSCAR OFERTAS ALUMNO*/
+            #listarofertasalumno {
+                font-family: 'Arial', sans-serif;
+                background-color: #f9f9f9;
+                padding: 20px;
+            }
+        
+            #listarofertasalumno    .breadcrumb {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+        
+            #listarofertasalumno    .breadcrumb li {
+                display: inline;
+                margin-right: 5px;
+            }
+        
+            #listarofertasalumno    #filtros {
+                margin-bottom: 20px;
+            }
+        
+            #listarofertasalumno    #fbusqueda,
+            #listarofertasalumno #fpoblacion,
+            #listarofertasalumno #fsector,
+            #listarofertasalumno #meses {
+                margin-bottom: 15px;
+            }
+        
+            #listarofertasalumno    #filtroTitulo,
+            #listarofertasalumno #poblacionSelect,
+            #listarofertasalumno #sectorSelect {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        
+            #listarofertasalumno    #filtroDuracionContrato {
+                width: 100%;
+            }
+        
+            .inscripcion {
+                    margin-top: 10px;
+            }
+            
+            .oferta {
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    margin-bottom: 20px; 
+                    text-align: left;
+                    border-radius: 4px;
+            }
+        
+            .inscripcion input {
+                background-color: #1a9ab6;
+                color: #fff;
+                padding: 10px 20px;
+                margin-right: 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s; 
+                    
+            }
+    
+      
+            .ya-inscrito {
+                    color: #3498db; 
+                    font-weight: bold;
+            }
+    
+       
+            .datosTabla, .article {
+                    background-color: #fff;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    overflow-y: auto; 
+                    max-height: 60vh; 
+            } 
+    
+            
+        /*PAGINA DE DATOS PERSONALES*/
+            #datospersonalesalumno {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            #datospersonalesalumno .todo{
+                overflow-y: auto;
+                max-height: 500px;
+        
+            }
+            #datospersonalesalumno .titulo {
+                color: #333;
+                text-align: center;
+            }
+        
+            #datospersonalesalumno .formulariodatos {
+                margin-top: 20px;
+            }
+        
+            #datospersonalesalumno label {
+                display: block;
+                margin-top: 10px;
+            }
+        
+            #datospersonalesalumno input[type="text"],
+            #datospersonalesalumno input[type="date"],
+            #datospersonalesalumnoselect {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                box-sizing: border-box;
+            }
+        
+            #datospersonalesalumno textarea {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                box-sizing: border-box;
+            }
+        
+            #datospersonalesalumno #perfil-icon {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+            }
+        
+            #datospersonalesalumno #imagenMostrada {
+                max-width: 300px;
+                max-height: 300px;
+            }
+        
+            #datospersonalesalumno #imagen-input {
+                display: none;
+            }
+        
+            #datospersonalesalumno #poblacionSelect {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                box-sizing: border-box;
+            }
+        
+            #datospersonalesalumno input[type="submit"] {
+                background-color: orange;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+            }
+            #datospersonalesalumno #perfil-icon {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    background-color: #ccc;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+        
+            #datospersonalesalumno #perfil-icon img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    border-radius: 50%;
+            }
+        
+            #datospersonalesalumno #imagen-input {
+                    display: none;
+                }
+
+
+                /*PAGINA CURRICULUM*/
+                .curriculum{
+                    font-size: 0.9rem;
+                    font-family: 'Arial', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f4f4f4;
+                    color: #333;
+                    justify-content: center; 
+                    align-items: center; 
+                    
+                    
+                    
+                }
+                
+                #maincurriculumalumno {
+                    display: flex;
+                    margin: 20px;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                   
+                }
+                
+                .asidecurriculum {
+                    width: 300px;
+                    background-color: rgba(26, 154, 182, 0.3);
+                    padding: 20px;
+                    border-right: 1px solid #ccc;
+                   
+                    
+                }
+                
+                .articlecurriculum {
+                    flex: 1;
+                    padding-left: 20px;
+                    
+                }
+                
+                .curriculum section {
+                    margin-bottom: 20px;
+                    padding-bottom: 10px; 
+                    border-bottom: 3px solid #3498db; 
+                }
+                
+                .curriculum div {
+                    margin-bottom: 10px;
+                    align-items: center;
+                }
+                
+                .curriculum label {
+                    font-weight: bold;
+                    flex: 1;
+                    align-items: center;
+                }
+
+                
+                .curriculum input[type="text"],
+                .curriculum input[type="tel"],
+                .curriculum input[type="email"],
+                .curriculum input[type="number"],
+                .curriculum input[type="date"],
+                .curriculum textarea {
+                    flex: 2;
+                    
+                    padding: 5px;
+                    box-sizing: border-box;
+                    border: none;
+                    background-color: transparent;
+                    margin-bottom: 0px;
+                    outline: none;
+                    font-size: 1em;
+                }
+                
+                .articlecurriculum section {
+                    margin-bottom: 20px; 
+                }
+
+                .articlecurriculum .tituloexperiencia{
+                    color: #3498db;
+                }
+                
+               .curriculum h2{
+                text-align: center;
+
+               }
+                
+               .articlecurriculum .experiencia, .idiomas, .formacion {
+                margin-bottom: 20px;
+                border-left: 2px solid #3498db; 
+                padding-left: 10px; 
+            }
+
+            .btncv {
+               
+                background-color: #3498db;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none; 
+                max-width: 200px;
+            }
+
+            .button-container{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+
+ /*CSS NUEVO*/
+ /* css crear nuevo usuario */
+ #datosacademicos {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* tabla datos academicos */
+	#maindatosacademicos {
+		
+			margin: 50px auto;
+			width: 800px;
+	}
+
+	.tablasDatosacademicos {
+			text-align: left;
+			border-collapse: collapse;
+			width: 100%;
+	}
+
+.tablasDatosacademicos th, td {
+			padding: 20px;
+	}
+
+.tablasDatosacademicos th {
+			background-color: #6ec1d6;
+			color: rgb(232, 236, 240);
+	}
+
+.tablasDatosacademicos tr:nth-child(even) {
+		background-color: #f2f2f2; 
+	}
+
+.tablasDatosacademicos tr:nth-child(odd) {
+		background-color: #d9edf7; 
+	}
+
+/********************************************************************************************************************/
+/*MEDIA QUERIES*/
+/*ESTILOS PARA EL MOVIL*/
+
+/*Para el footer*/
+@media (max-width: 700px){
+    footer {
+        display: grid;
+        grid-template-columns: 1fr; /* Diseño de una sola columna */
+        grid-gap: 10px; /* Ajusta el espacio entre los elementos*/
+        padding: 20px;
+    }
+
+    .logos, .copy, #imagesfooter {
+        grid-column: 1; /* Cada sección abarca todo el ancho de la columna */
+    }
+
+    #imagesfooter {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para las imágenes */
+    }
+
+    /* Opcional: agregar estilos para secciones individuales */
+    .logos, .copy, #imagesfooter, .nuestroLogo, .unionEuropea {
+        text-align: center; /* Centrar el contenido dentro de cada sección */
+    }
+}
+
