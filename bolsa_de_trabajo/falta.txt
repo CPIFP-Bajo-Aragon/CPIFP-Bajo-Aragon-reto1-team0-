@@ -1,0 +1,6 @@
+
+Que perfiles esta buscando la empresa(opcional)
+filtrador de lo que esta buscando la empresa(opcional)
+Que perfiles esta buscando el alumno(opcional)
+filtrador de lo que esta buscando el alumno(opcional)
+    session_start();
